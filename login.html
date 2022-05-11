@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body>
+<div class="container">
+    <div class="login_register">
+        <h2>Login</h2>
+        <form id="login">
+            <div>
+                <label for="login_email">
+                    <input type="email" name="email" placeholder="email" id="login_email">
+                </label>
+                <div id="error_login_email" class="error"></div>
+            </div>
+            <div>
+                <label for="login_password">
+                    <input type="password" name="password" placeholder="password" id="login_password" autocomplete="off">
+                </label>
+                <div id="error_login_password" class="error"></div>
+            </div>
+            <div>
+                <button id="login_submit" type="submit">Confirm</button>
+            </div>
+            <div>
+                Don't have an account? <a href="signup.html">Sign Up</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!--FIREBASE-->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAbEAzA_TAnuFyC-HIbBwBPOomhiQMwnoQ",
+      authDomain: "aso-rock--23.firebaseapp.com",
+      projectId: "aso-rock--23",
+      storageBucket: "aso-rock--23.appspot.com",
+      messagingSenderId: "290641051605",
+      appId: "1:290641051605:web:bfe76de2acc6a8d41ac75c",
+      measurementId: "G-DV5BDZ1V0Y"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDjnOAy1jPboJaDSTlOD-VS957LW-cBdO0"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // my scripts
+    const auth = firebase.auth()
+    const loginSubmit = document.getElementById('login_submit')
+
+    loginSubmit.addEventListener('click', function (event) {
+        event.preventDefault()
+        let hasErrors = false
+
+        const loginForm = document.getElementById('login')
+
+        const loginEmail = document.getElementById('login_email').value
+        const loginPassword = document.getElementById('login_password').value
+
+        const loginError = document.getElementById("error_login_password")
+
+        let errors = {}
+
+        if (hasErrors === true) {
+            return hasErrors
+        } else if (hasErrors === false){
+            auth.signInWithEmailAndPassword(loginEmail, loginPassword).then(() => {
+                loginForm.setAttribute('action', 'home.html')
+                loginForm.submit()
+            }).catch(() => {
+                errors.loginPassword = 'Email or Password doesn\'t match'
+                loginError.innerHTML = errors.loginPassword
+                loginError.style.color = 'red'
+            })
+        }
+    })
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

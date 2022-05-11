@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body>
+
+<div class="container">
+    <div class="login_register">
+        <h2>AsoRock</h2> 
+        <form id="registration">
+            <div>
+                <label for="email">
+                    <input type="email" name="email" placeholder="email" id="email">
+                </label>
+                <div id="error_email" class="error"></div>
+            </div>
+            <div>
+                <label for="password">
+                    <input type="password" name="password" placeholder="password" id="password" autocomplete="off">
+                </label>
+                <div id="error_password" class="error"></div>
+            </div>
+            
+            <div class="checkbox">
+                <label for="register_agreement">
+                    <input type="checkbox" name="agree" id="register_agreement">
+                    I have read and agreed to terms and conditions
+                </label>
+                <div id="error_agree" class="error"></div>
+            </div>
+            <div>
+                <button id="register_submit" type="submit">Confirm</button>
+            </div>
+            <div>
+                Already have account? <a class="link-reset" href="login.html">Sign In</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAbEAzA_TAnuFyC-HIbBwBPOomhiQMwnoQ",
+    authDomain: "aso-rock--23.firebaseapp.com",
+    projectId: "aso-rock--23",
+    storageBucket: "aso-rock--23.appspot.com",
+    messagingSenderId: "290641051605",
+    appId: "1:290641051605:web:bfe76de2acc6a8d41ac75c",
+    measurementId: "G-DV5BDZ1V0Y"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+<script>
+    // my scripts
+    const auth = firebase.auth()
+    const registerSumbit = document.getElementById('register_submit')
+
+    registerSumbit.addEventListener('click', function (event) {
+        event.preventDefault();
+        let hasErrors = false;
+
+        const registerForm = document.getElementById('registration')
+
+        // Field Values Start
+        const email = document.getElementById('email').value
+        const password = document.getElementById('password').value
+        const registerAgreement = document.getElementById('register_agreement')
+        // Field Values End
+
+        // Errors Variable Start
+        const emailError = document.getElementById("error_email")
+        const passwordError = document.getElementById("error_password")
+        const registerAgreementError = document.getElementById("error_agree")
+        // Errors Variable End
+
+        let errors = {}
+
+        if (!(email.includes('@'))) {
+            errors.email = "Invalid Email"
+            emailError.innerHTML = errors.email
+            emailError.style.color = 'red'
+            hasErrors = true
+        } else {
+            emailError.innerHTML = ''
+        }
+
+        if (password.length < 8) {
+            errors.password = 'Passwords should be at least 8 symbol'
+            passwordError.innerHTML = errors.password
+            passwordError.style.color = 'red'
+            hasErrors = true
+        } else {
+            passwordError.innerHTML = ''
+        }
+
+        if (registerAgreement.checked === false) {
+            errors.agreement = 'You need to agree terms'
+            registerAgreementError.innerHTML = errors.agreement
+            registerAgreementError.style.color = 'red'
+            hasErrors = true
+        } else {
+            registerAgreementError.innerHTML = ''
+        }
+
+        if (hasErrors === true) {
+            return hasErrors;
+        } else if (hasErrors === false){
+            auth.createUserWithEmailAndPassword(email, password).then(() => {
+                registerForm.setAttribute('action', 'home.html')
+                registerForm.submit()
+            }).catch(err => {
+                alert(err.message)
+            })
+        }
+    })
+
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

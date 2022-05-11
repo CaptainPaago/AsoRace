@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/pages/notFound404.css">
+
+    <title>Not found</title>
+</head>
+<body>
+<div class="content d-flex">
+    <div class="title d-flex flex-column align-items-center">
+        <p class="warning-text mb-2 mb-md-0">ERROR</p>
+        <img class="d-none d-md-block mb-3" src="../images/notFound/404.svg" alt="">
+        <h1 class="d-block d-md-none mb-3">404</h1>
+        <p class="text-center mb-4">Aboi, na forest we don reach so o!<br>President no be prophet</p>
+        <a href="HOME.html" class="btn btn-outline-light-green text-white font-weight-bold px-4">Go Home</a>
+    </div>
+</div>
+
+<!--FIREBASE-->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAbEAzA_TAnuFyC-HIbBwBPOomhiQMwnoQ",
+      authDomain: "aso-rock--23.firebaseapp.com",
+      projectId: "aso-rock--23",
+      storageBucket: "aso-rock--23.appspot.com",
+      messagingSenderId: "290641051605",
+      appId: "1:290641051605:web:bfe76de2acc6a8d41ac75c",
+      measurementId: "G-DV5BDZ1V0Y"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script>
+  var scene = $('.scene').get(0);
+  new Parallax(scene);
+</script>
+</body>
+</html>
