@@ -1,0 +1,76 @@
+@mixin modal($color: $primary, $bgColor: $dark) {
+  .modal-dialog {
+    .modal-content {
+      background-color: $bgColor;
+      border: 2px solid $color;
+      @include block-shadow($color);
+      .modal-header {
+        .title {
+          @include text-stroke-shadow($color);
+        }
+      }
+      .modal-body {
+        .custom-ol {
+          li {
+            &::before {
+              @include text-stroke-shadow($color);
+              border: 2px solid $color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  .modal-dialog {
+    .modal-content {
+      background-color: $dark;
+      border: 2px solid $primary;
+      @include block-shadow($primary);
+      .btn {
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+      .modal-header {
+        border-bottom: none;
+        .title {
+          font-size: $h2-font-size;
+          font-weight: $font-weight-bolder;
+          @include media-breakpoint-down(xl) {
+            font-size: $h4-font-size;
+            -webkit-text-stroke-width: 1.5px;
+          }
+        }
+      }
+      .modal-footer {
+        border-top: none;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &.modal-primary {
+    @include modal($primary);
+  }
+  &.modal-warning {
+    @include modal($warning);
+  }
+  &.modal-danger{
+    @include modal($danger);
+  }
+  &.modal-success{
+    @include modal($success);
+  }
+  &.modal-info {
+    @include modal($info);
+  }
+
+  &.modal-light-green{
+    @include modal($light-green);
+  }
+}

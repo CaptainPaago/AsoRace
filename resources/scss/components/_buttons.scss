@@ -1,0 +1,143 @@
+@mixin button($color, $text-color:initial) {
+  @include block-shadow($color, 0.8);
+  background-color: $color;
+  color: $text-color;
+  .custom-icon {
+    background: $text-color;
+  }
+}
+
+@mixin button-outline($color, $text-color:white) {
+  @include block-shadow($color);
+  color: $color!important;
+  text-transform: capitalize;
+  border: 2px solid $color;
+  box-sizing: border-box;
+  .custom-icon {
+    background: $color;
+  }
+  &:hover {
+    background-color: $color;
+    color: $text-color!important;
+    .custom-icon {
+      background: $text-color;
+    }
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+@mixin button-shine($color, $text-color:initial) {
+  @include block-shadow($color);
+  background-color: $color;
+  color: $text-color;
+  .custom-icon {
+    background: $text-color;
+  }
+}
+
+.btn {
+  transition: 0.1s;
+  border-radius: $border-radius-lg;
+  min-height: $input-height-normal;
+  font-weight: bold;
+  padding-left: 22px;
+  padding-right: 22px;
+  font-size: $h5-font-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media-breakpoint-up(xxxl) {
+    &.btn-lg {
+      min-height: $input-height-large;
+      font-weight: 800;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
+  &.btn-sm {
+    min-height: $input-height-small;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: $h6-font-size;
+  }
+
+  &.btn-block {
+    padding-left: 0;
+    padding-right: 0;
+      margin: 0;
+  }
+
+  &.btn-primary {
+    @include button($violet, #fff);
+  }
+  &.btn-outline-primary {
+    @include button-outline($violet);
+  }
+
+  &.btn-info {
+    @include button($info, #fff);
+  }
+  &.btn-outline-info {
+    @include button-outline($info);
+  }
+
+  &.btn-outline-warning {
+    @include button-outline($warning);
+  }
+
+  &.btn-violet {
+    @include button($violet, #fff);
+  }
+  &.btn-outline-violet {
+    @include button-outline($violet);
+  }
+
+  &.btn-light-red {
+    @include button($light-red, #fff);
+  }
+  &.btn-outline-light-red {
+    @include button-outline($light-red);
+  }
+  &.btn-light-red-shine {
+    @include button-shine($light-red, #fff);
+  }
+
+  &.btn-green {
+    @include button($green, #fff);
+  }
+  &.btn-outline-green {
+    @include button-outline($green);
+  }
+  &.btn-green-shine {
+    @include button-shine($green, #fff);
+  }
+
+  &.btn-outline-light-dark {
+    @include button-outline(#483d66);
+  }
+
+  &.btn-light-green {
+    @include button($light-green, black);
+  }
+  &.btn-outline-light-green {
+    @include button-outline($light-green, black);
+  }
+
+  &.btn-google {
+    @include button-outline(#DB4437);
+    text-shadow: 0 0 10px rgba(#DB4437, 0.7);
+  }
+
+  &.btn-facebook {
+    @include button-outline(#4267B2);
+    text-shadow: 0 0 10px rgba(#4267B2, 0.7);
+  }
+  &:active {
+    box-shadow: none!important;
+    filter: brightness(0.9);
+  }
+}

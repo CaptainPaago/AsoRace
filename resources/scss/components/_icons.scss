@@ -1,0 +1,285 @@
+.icon-add {
+    mask: url(../../images/icons/add.svg);
+}
+
+.icon-discounts {
+    mask: url(../../images/icons/discounts.svg);
+}
+
+.icon-analytics {
+    mask: url(../../images/icons/analytics.svg);
+}
+
+.icon-arrow-left {
+    mask: url(../../images/icons/arrow-left.svg);
+}
+
+.icon-arrow-right {
+    mask: url(../../images/icons/arrow-right.svg);
+}
+
+.icon-arrow-down {
+    mask: url(../../images/icons/arrow-down.svg);
+}
+
+.icon-bell {
+    mask: url(../../images/icons/bell.svg);
+}
+
+.icon-buyer {
+    mask: url(../../images/icons/buyer.svg);
+}
+
+.icon-cart {
+    mask: url(../../images/icons/cart.svg);
+}
+
+.icon-chat {
+    mask: url(../../images/icons/chat.svg);
+}
+
+.icon-check {
+    mask: url(../../images/icons/check.svg);
+}
+
+.icon-check-outline {
+  mask: url(../../images/icons/check-outline.svg);
+}
+
+.icon-check-outline-fill {
+    mask: url(../../images/icons/check-outline-fill.svg);
+}
+
+.icon-close {
+    mask: url(../../images/icons/close.svg);
+}
+
+.icon-close-circle {
+    mask: url(../../images/icons/close-circle.svg);
+}
+
+.icon-home {
+    mask: url(../../images/icons/home.svg);
+}
+
+.icon-services {
+    mask: url(../../images/icons/services.svg);
+}
+
+.icon-joystick {
+    mask: url(../../images/icons/joystick.svg);
+}
+
+.icon-items {
+    mask: url(../../images/icons/items.svg);
+}
+
+.icon-attachment {
+    mask: url(../../images/icons/attachment.svg);
+}
+
+.icon-delete {
+    mask: url(../../images/icons/delete.svg);
+}
+
+.icon-delete2 {
+    mask: url(../../images/icons/delete-2.svg);
+}
+
+.icon-dis-fill {
+    mask: url(../../images/icons/dis-fill.svg);
+}
+
+.icon-dis-outline {
+    mask: url(../../images/icons/dis-outline.svg);
+}
+
+.icon-edit {
+    mask: url(../../images/icons/edit.svg);
+}
+
+.icon-faq {
+    mask: url(../../images/icons/faq.svg);
+}
+
+.icon-fb {
+    mask: url(../../images/icons/fb.svg);
+}
+
+.icon-general {
+    mask: url(../../images/icons/general.svg);
+}
+
+.icon-gift {
+    mask: url(../../images/icons/gift.svg);
+}
+
+.icon-message {
+    mask: url(../../images/icons/message.svg);
+}
+
+.icon-heart-fill {
+    mask: url(../../images/icons/heart-fill.svg);
+}
+
+.icon-heart-outline {
+    mask: url(../../images/icons/heart-outline.svg);
+}
+
+.icon-info {
+    mask: url(../../images/icons/info.svg);
+}
+
+.icon-legal {
+    mask: url(../../images/icons/legal.svg);
+}
+
+.icon-library {
+    mask: url(../../images/icons/library.svg);
+}
+
+.icon-like-fill {
+    mask: url(../../images/icons/like-fill.svg);
+}
+
+.icon-like-outline {
+    mask: url(../../images/icons/like-outline.svg);
+}
+
+.icon-like-fill {
+    mask: url(../../images/icons/like-fill.svg);
+}
+
+.icon-luck {
+    mask: url(../../images/icons/luck.svg);
+}
+
+.icon-management {
+    mask: url(../../images/icons/management.svg);
+}
+
+.icon-off {
+    mask: url(../../images/icons/off.svg);
+}
+
+.icon-profile {
+    mask: url(../../images/icons/profile.svg);
+}
+
+.icon-rocket {
+    mask: url(../../images/icons/rocket.svg);
+}
+
+.icon-search {
+    mask: url(../../images/icons/search.svg);
+}
+
+.icon-search-2 {
+    mask: url(../../images/icons/search2.svg);
+}
+
+.icon-seller {
+    mask: url(../../images/icons/seller.svg);
+}
+
+.icon-send {
+    mask: url(../../images/icons/send.svg);
+}
+
+.icon-settings {
+    mask: url(../../images/icons/settings.svg);
+}
+
+.icon-star {
+    mask: url(../../images/icons/star.svg);
+}
+
+.icon-support {
+    mask: url(../../images/icons/support.svg);
+}
+
+.icon-twitter {
+    mask: url(../../images/icons/twitter.svg);
+}
+
+.icon-user {
+    mask: url(../../images/icons/user.svg);
+}
+
+.icon-XP {
+    mask: url(../../images/icons/XP.svg);
+}
+
+.icon-burger {
+    mask: url(../../images/icons/burger.svg);
+}
+
+.icon-visa {
+    mask: url(../../images/icons/visa.svg);
+}
+
+.icon-mastercard {
+    mask: url(../../images/icons/mastercard.svg);
+}
+
+.icon-eye {
+    mask: url(../../images/icons/eye.svg);
+}
+
+.icon-vertical-dots {
+    mask: url(../../images/icons/vertical-dots.svg);
+}
+
+.custom-icon {
+    vertical-align: middle;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 255, 255, .5);
+    opacity: 1;
+    mask-size: 100% 100%;
+
+    &.custom-icon-primary {
+        background: $primary !important;
+    }
+
+    &.custom-icon-success {
+        background: $success !important;
+    }
+
+    &.custom-icon-danger {
+        background: $danger !important;
+    }
+
+  &.custom-icon-info {
+    background: $info !important;
+  }
+
+    &.custom-icon-dark {
+        background: $dark !important;
+    }
+
+    &.custom-icon-warning {
+        background: $warning !important;
+    }
+
+    &.custom-icon-secondary {
+        background: $gray !important;
+    }
+
+    &.icon-twitter {
+        background-color: #1DA1F2;
+    }
+    &.icon-fb {
+        background-color: #4267B2;
+    }
+    &.custom-icon-light-green {
+        background: $light-green !important;
+    }
+    &.custom-icon-green {
+        background: $green !important;
+    }
+    &.custom-icon-blue {
+        background: $blue !important;
+    }
+}

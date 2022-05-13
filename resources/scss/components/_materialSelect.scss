@@ -1,0 +1,265 @@
+@mixin material-select-wrapper($color: $primary, $border-color: $light-dark) {
+  width: 100%;
+  color: $light-gray;
+  &.material-select-lg {
+    @include media-breakpoint-up(xxxl) {
+      .material-select-body {
+        height: $input-height-large;
+        .selected {
+          line-height: $input-height-large;
+        }
+        .placeholder {
+          line-height: calc(#{$input-height-large} - 4px);
+        }
+      }
+      &.material-select-required {
+        .material-select-body {
+          .selected {
+            line-height: calc(#{$input-height-large} - 4px);
+          }
+        }
+      }
+    }
+  }
+  &.material-select-sm {
+    .material-select-body {
+      height: $input-height-small;
+      .selected {
+        line-height: $input-height-small;
+      }
+      .placeholder {
+        line-height: calc(#{$input-height-small} - 4px);
+      }
+    }
+    &.material-select-required {
+      .material-select-body {
+        .selected {
+          line-height: calc(#{$input-height-small} - 4px);
+        }
+      }
+    }
+  }
+
+  .material-select-body {
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+    height: $input-height-normal;
+    border: 2px solid $border-color;
+    border-radius: $border-radius-lg;
+    position: relative;
+    .expand-toggle, .clear-button {
+      transition: 0.3s;
+      z-index: 2;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translate(0, -50%) rotate(-90deg);
+    }
+    .selected {
+      width: 100%;
+      height: 100%;
+      line-height: $input-height-normal;
+      padding: 0 46px 0 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .placeholder {
+      transition: line-height 0.2s, font-size 0.2s;
+      width: calc(100% + 4px);
+      margin-left: -2px;
+      color: $gray-500;
+      border-radius: $border-radius-lg;
+      font-size: 16px;
+      line-height: calc(#{$input-height-normal} - 4px);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: flex;
+      height: 100%;
+      &:before {
+        opacity: 0;
+        content: "";
+        width: 20px;
+        margin-right: 10px;
+        display: block;
+        border-top-left-radius: $border-radius-lg;
+        border-bottom-left-radius: $border-radius-lg;
+      }
+      &:after {
+        opacity: 0;
+        content: "";
+        width: 100%;
+        margin-left: 10px;
+        border-top-right-radius: $border-radius-lg;
+        border-bottom-right-radius: $border-radius-lg;
+        display: block;
+      }
+    }
+    .select-list {
+      z-index: 10;
+      position: absolute;
+      width: calc(100% + 4px);
+      margin-left: -2px;
+      top: 108%;
+      left: 0;
+      background-color: #2B2541;
+      color: $gray-500;
+      border-radius: $border-radius-md;
+      li {
+        cursor: pointer;
+        transition: all .1s linear;
+        padding: 10px 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        border-radius: $border-radius-md;
+        &:hover {
+          background-color: rgba($semi-dark, 0.4);
+        }
+      }
+    }
+    &.active {
+      border-top: none;
+      .placeholder {
+        font-size: $small-font-size;
+        line-height: 1px;
+        &:before {
+          opacity: 1;
+          border-top: 2px solid $border-color;
+          border-left: 2px solid $border-color;
+        }
+        &:after {
+          opacity: 1;
+          border-top: 2px solid $border-color;
+          border-right: 2px solid $border-color;
+        }
+      }
+      .expand-toggle {
+        display: none;
+      }
+    }
+    &.expanded {
+      @include block-shadow($color);
+      border-top: none;
+      border-color: $color;
+      .placeholder {
+        color: $gray-200;
+      }
+      .placeholder {
+        font-size: $small-font-size;
+        line-height: 1px;
+        &:before {
+          opacity: 1;
+          border-top: 2px solid $color;
+          border-left: 2px solid $color;
+        }
+        &:after {
+          opacity: 1;
+          border-top: 2px solid $color;
+          border-right: 2px solid $color;
+        }
+      }
+    }
+    &:not(.active) {
+      .clear-button {
+        display: none;
+      }
+    }
+  }
+  &.material-select-required {
+    .material-select-body {
+      .clear-button {
+        display: none;
+      }
+      .selected {
+        line-height: calc(#{$input-height-normal} - 4px);
+      }
+      &.active {
+        border-top: 2px solid $border-color;
+        .expand-toggle {
+          display: block;
+        }
+      }
+      &.expanded {
+        border-top: 2px solid $color;
+        .expand-toggle {
+          display: block;
+          transform: translate(0, -50%) rotate(0);
+        }
+      }
+    }
+  }
+}
+
+.material-select-wrapper {
+  @include material-select-wrapper();
+}
+.material-select-wrapper.material-select-primary {
+  @include material-select-wrapper($primary);
+}
+.material-select-wrapper.material-select-danger {
+  @include material-select-wrapper($danger);
+}
+.material-select-wrapper.material-select-success {
+  @include material-select-wrapper($success);
+}
+.material-select-wrapper.material-select-warning {
+  @include material-select-wrapper($warning);
+}
+.material-select-wrapper.material-select-info {
+  @include material-select-wrapper($info);
+}
+
+//.material-select-wrapper {
+//  &.material-select-sm {
+//    .material-select-body {
+//      height: $input-height-small;
+//      .selected {
+//        line-height: calc(#{$input-height-small} - 4px);
+//        font-size: unset;
+//      }
+//      .placeholder {
+//        line-height: calc(#{$input-height-small} - 6px);
+//        font-size: unset;
+//      }
+//      &.active {
+//        .placeholder {
+//          margin-top: 0;
+//          font-size: $small-font-size;
+//        }
+//      }
+//    }
+//  }
+//  @include media-breakpoint-up(xxxl) {
+//    &.material-select-lg {
+//      .material-select-body {
+//        height: $input-height-large;
+//        .selected {
+//          line-height: calc(#{$input-height-large} - 4px);
+//        }
+//        .placeholder {
+//          line-height: calc(#{$input-height-large} - 6px);
+//          font-size: $h5-font-size;
+//        }
+//        &.active {
+//          .placeholder {
+//            line-height: 2em;
+//            font-size: $h6-font-size;
+//          }
+//        }
+//      }
+//    }
+//  }
+//  &.material-select-violet {
+//    .material-select-body {
+//      &.expanded {
+//        @include block-shadow($violet);
+//        border-color: $violet;
+//      }
+//    }
+//  }
+//}

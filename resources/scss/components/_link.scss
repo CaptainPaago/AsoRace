@@ -1,0 +1,55 @@
+a {
+    &.violet {
+        color: $violet;
+
+        &:hover {
+            color: $violet;
+        }
+    }
+
+    &.dark-violet {
+        color: rgba($violet, 0.6);
+
+        &:hover {
+            color: rgba($violet, 0.6);
+        }
+    }
+    &.primary {
+        color: $primary;
+        &:hover {
+            color: $primary;
+        }
+    }
+  &.link-info {
+    color: $info;
+    &:hover {
+      color: $info;
+    }
+  }
+    &.success {
+        color: $success;
+        &:hover {
+            color: $success;
+        }
+    }
+    &.danger {
+        color: $danger;
+        &:hover {
+            color: $danger;
+        }
+    }
+    &.gray {
+        color: $gray;
+
+        &:hover {
+            color: $gray;
+        }
+    }
+  &.light-gray {
+    color: $light-gray;
+
+    &:hover {
+      color: $light-gray;
+    }
+  }
+}

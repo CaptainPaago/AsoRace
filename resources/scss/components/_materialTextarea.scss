@@ -1,0 +1,133 @@
+@mixin material-textarea($color: $primary, $border-color: $light-dark)  {
+  &.material-textarea-lg {
+    @include media-breakpoint-up(xxxl) {
+      height: $input-height-large;
+      .placeholder {
+        line-height: calc(#{$input-height-large} - 4px);
+      }
+    }
+  }
+  &.material-textarea-sm {
+    padding-top: 12px;
+    padding-bottom: 10px;
+    height: $input-height-small;
+    .placeholder {
+      line-height: calc(#{$input-height-small} - 4px);
+    }
+  }
+
+  width: 100%;
+  color: $light-gray;
+  height: $input-height-normal;
+  border: 2px solid $border-color;
+  border-radius: $border-radius-lg;
+  position: relative;
+  padding-top: 16px;
+  padding-bottom: 10px;
+  textarea {
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    line-height: 1.2em;
+    border: none;
+    background-color: transparent;
+    color: $light-gray;
+    resize: none;
+    &:focus, &:active {
+      border: none;
+      outline: none;
+    }
+  }
+  .placeholder {
+    pointer-events: none;
+    transition: line-height 0.2s, font-size 0.2s;
+    position: absolute;
+    top: 0;
+    width: calc(100% + 4px);
+    margin-left: -2px;
+    color: $gray-500;
+    border-radius: $border-radius-lg;
+    font-size: 16px;
+    line-height: calc(#{$input-height-normal} - 4px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    height: 100%;
+    &:before {
+      opacity: 0;
+      content: "";
+      width: 20px;
+      margin-right: 10px;
+      display: block;
+      border-top-left-radius: $border-radius-lg;
+      border-bottom-left-radius: $border-radius-lg;
+    }
+    &:after {
+      opacity: 0;
+      content: "";
+      width: 100%;
+      margin-left: 10px;
+      border-top-right-radius: $border-radius-lg;
+      border-bottom-right-radius: $border-radius-lg;
+      display: block;
+    }
+  }
+  &.active {
+    border-top: none;
+    .placeholder {
+      font-size: $small-font-size;
+      line-height: 1px;
+      &:before {
+        opacity: 1;
+        border-top: 2px solid $border-color;
+        border-left: 2px solid $border-color;
+      }
+      &:after {
+        opacity: 1;
+        border-top: 2px solid $border-color;
+        border-right: 2px solid $border-color;
+      }
+    }
+  }
+
+  &:focus-within {
+    border-top: none;
+    border-color: $color;
+    @include block-shadow($color);
+    .placeholder {
+      font-size: $small-font-size;
+      line-height: 1px;
+      &:before {
+        opacity: 1;
+        border-top: 2px solid $color;
+        border-left: 2px solid $color;
+      }
+      &:after {
+        opacity: 1;
+        border-top: 2px solid $color;
+        border-right: 2px solid $color;
+      }
+    }
+  }
+}
+
+.material-textarea {
+  @include material-textarea();
+}
+.material-textarea.material-textarea-primary {
+  @include material-textarea($primary);
+}
+.material-textarea.material-textarea-warning{
+  @include material-textarea($warning);
+}
+.material-textarea.material-textarea-danger{
+  @include material-textarea($danger);
+}
+.material-textarea.material-textarea-success{
+  @include material-textarea($success);
+}
+.material-textarea.material-textarea-info{
+  @include material-textarea($info);
+}
+
+

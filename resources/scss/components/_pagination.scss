@@ -1,0 +1,37 @@
+.pagination-row {
+  a,span {
+    color: rgba(#fff, 0.5);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    &.active {
+      pointer-events: none;
+      text-decoration: none;
+      font-weight: 800;
+      color: $violet;
+      border-radius: $border-radius-md;
+      border: 2px solid $violet;
+      @include block-shadow($violet);
+      @include text-glow-mixin($violet);
+    }
+
+    //arrows
+    &.arrow-left, &.arrow-right {
+      @extend .active;
+      pointer-events: initial;
+      .custom-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &.arrow-left {
+      transform: rotate(90deg);
+    }
+    &.arrow-right {
+      transform: rotate(-90deg);
+    }
+  }
+}

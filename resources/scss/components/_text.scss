@@ -1,0 +1,92 @@
+@mixin text-stroke-shadow($color, $width:2px, $glow:0.4, $shadow-size:20px) {
+  color: transparent;
+  -webkit-text-stroke: $width $color;
+  text-shadow: 0 0 $shadow-size rgba($color,$glow);
+}
+
+@mixin text-glow-mixin($color) {
+  color: $color;
+  text-shadow: 0 0 10px rgba($color, 0.8);
+}
+.text-gray {
+  color: rgba(#fff, 0.5);
+}
+.text-light-gray {
+  color: rgba(#fff, 0.7);
+}
+
+.text-green {
+  color: $green;
+}
+.text-glow-green {
+  @include text-glow-mixin($green);
+}
+.text-stroke-glow-green  {
+  @include text-stroke-shadow($green);
+}
+.text-light-green {
+  color: $light-green;
+}
+.text-glow-light-green {
+  @include text-glow-mixin($light-green);
+}
+.text-stroke-glow-light-green  {
+  @include text-stroke-shadow($light-green);
+}
+.text-violet {
+  color: $violet;
+}
+.text-glow-violet {
+  @include text-glow-mixin($violet);
+}
+.text-stroke-glow-violet {
+  @include text-stroke-shadow($violet);
+}
+.text-glow-yellow {
+  @include text-glow-mixin($yellow);
+}
+.text-stroke-glow-yellow  {
+  @include text-stroke-shadow($yellow);
+}
+.text-stroke-glow-yellow  {
+  @include text-stroke-shadow($yellow);
+}
+.text-light-red {
+  color: $light-red;
+}
+.text-glow-light-red {
+  @include text-glow-mixin($light-red);
+}
+.text-stroke-glow-light-red  {
+  @include text-stroke-shadow($light-red);
+}
+.text-glow-blue  {
+  @include text-glow-mixin($blue);
+}
+.text-stroke-glow-blue {
+  @include text-stroke-shadow($blue);
+}
+.text-light-dark{
+  color: $light-dark;
+}
+.text-stroke-glow-light-dark {
+    @include text-stroke-shadow($light-dark);
+}
+
+.line-clamp {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.line-clamp-1 {
+  @extend .line-clamp;
+  -webkit-line-clamp: 1;
+}
+.line-clamp-2 {
+  @extend .line-clamp;
+  -webkit-line-clamp: 2;
+}
+.line-clamp-3 {
+  @extend .line-clamp;
+  -webkit-line-clamp: 3;
+}

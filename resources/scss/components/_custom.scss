@@ -1,0 +1,55 @@
+// variable overrides
+$primary: $violet;
+$success: $green;
+$danger: $light-red;
+$warning: $yellow;
+$info: $blue;
+$dark: $dark;
+$light: $light-gray;
+
+$spacer: 20px;
+
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-bolder:          900;
+
+$border-radius:               8px;
+$border-radius-lg:            10px;
+$border-radius-sm:            8px;
+
+$btn-border-radius:           .5rem;
+$btn-border-radius-lg:        .6rem;
+$btn-border-radius-sm:        .4rem;
+$input-border-radius:                   .5rem;
+$input-border-radius-lg:                .6rem;
+$input-border-radius-sm:                .4rem;
+
+$grid-breakpoints: (
+        xxxs: 0,
+        xxs: 320px,
+        xs: 568px,
+        sm: 667px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1440px,
+        xxxl: 1600px,
+        xxxxl: 1760px,
+);
+
+$container-max-widths: (
+        xxxs: 0,
+        xxs: 320px,
+        xs: 568px,
+        sm: 667px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1440px,
+        xxxxl: 1760px
+);
+
+// Bootstrap and its default variables
+@import "../../../node_modules/bootstrap/scss/bootstrap";

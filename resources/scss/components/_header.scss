@@ -1,0 +1,251 @@
+.main-header {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 14px;
+  background-color: $dark;
+  border-radius: $border-radius-md;
+  position: relative;
+  .balance-number {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .custom-icon {
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.35);
+  }
+  .custom-icon.icon-chat {
+    width: 20px;
+    height: 20px;
+  }
+  .notifications-dropdown {
+    position: relative;
+    .notifications-button {
+      &.active {
+        position: relative;
+        &:after {
+          content: "";
+          width: 5px;
+          height: 5px;
+          background-color: $success;
+          @include block-shadow($success);
+          border-radius: 50%;
+          position: absolute;
+          right: 0;
+          top: -4px;
+          display: inline-table;
+        }
+      }
+    }
+    .notifications-dropdown-menu {
+      background: $light-dark;
+      border-radius: $border-radius-lg;
+      z-index: 8;
+      position: absolute;
+      top: 180%;
+      right: -130%;
+      width: 350px;
+      max-width: 74vw;
+      .content {
+        max-height: 80vh;
+        overflow: auto;
+      };
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent $light-dark transparent;
+        top: -8px;
+        right: 33px;
+      }
+      .notifications-dropdown-item {
+        position: relative;
+        border-bottom: 1px solid #473C67;
+        color: $light-gray;
+        font-size: small;
+        line-height: 140%;
+        cursor: pointer;
+        &:before {
+          transition: 0.2s;
+          content: "";
+          position: absolute;
+          height: 85%;
+          left: 0;
+          border-left: 3px solid transparent;
+          border-radius: 1px;
+          @include block-shadow(transparent);
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        &.disabled {
+          color: inherit;
+        }
+        &:hover:before {
+          border-left: 3px solid $primary;
+          @include block-shadow($primary);
+        }
+        &.item-primary:hover:before {
+          border-left: 3px solid $primary;
+          @include block-shadow($primary);
+        }
+        &.item-danger:hover:before {
+          border-left: 3px solid $danger;
+          @include block-shadow($danger);
+        }
+        &.item-warning:hover:before {
+          border-left: 3px solid $warning;
+          @include block-shadow($warning);
+        }
+        &.item-success:hover:before {
+          border-left: 3px solid $success;
+          @include block-shadow($success);
+        }
+      }
+      .load-more-link-container {
+        border-top: 1px solid #473C67;
+        a {
+          color: #736699;
+        }
+      }
+    }
+  }
+
+  .profile-dropdown {
+    position: relative;
+    .profile-dropdown-menu {
+      background: $light-dark;
+      border-radius: $border-radius-lg;
+      z-index: 8;
+      position: absolute;
+      top: 180%;
+      right: -90%;
+      width: 160px;
+      max-width: 80vw;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent $light-dark transparent;
+        top: -8px;
+        right: 24px;
+      }
+      .profile-dropdown-item {
+        position: relative;
+        border-bottom: 1px solid #473C67;
+        color: $light-gray;
+        font-size: small;
+        line-height: 140%;
+        cursor: pointer;
+        text-decoration: none;
+        &:last-child {
+          border-bottom: none;
+        }
+        .custom-icon {
+          background: $light-gray;
+        }
+        &:before {
+          transition: 0.2s;
+          content: "";
+          position: absolute;
+          height: 85%;
+          left: 0;
+          border-left: 3px solid transparent;
+          border-radius: 1px;
+          @include block-shadow(transparent);
+        }
+        &:hover:before {
+          border-left: 3px solid $primary;
+          @include block-shadow($primary);
+        }
+        &.item-primary:hover:before {
+          border-left: 3px solid $primary;
+          @include block-shadow($primary);
+        }
+        &.item-danger:hover:before {
+          border-left: 3px solid $danger;
+          @include block-shadow($danger);
+        }
+        &.item-warning:hover:before {
+          border-left: 3px solid $warning;
+          @include block-shadow($warning);
+        }
+        &.item-success:hover:before {
+          border-left: 3px solid $success;
+          @include block-shadow($success);
+        }
+      }
+    }
+  }
+
+  .search-container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    .material-input {
+      .icon-search-2 {
+        width: 20px;
+        height: 20px;
+      }
+      .close-button {
+        cursor: pointer;
+        width: 14px;
+        height: 14px;
+        pointer-events: initial!important;
+      }
+    }
+    .search-results {
+      width: 100%;
+      position: absolute;
+      background: $light-dark;
+      .res-group {
+        border-bottom: 1px solid #473C67;
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+          border-bottom: none;
+        }
+        .result-item {
+          padding: 10px 0;
+          text-decoration: none;
+          position: relative;
+          &:before {
+            transition: 0.2s;
+            content: "";
+            position: absolute;
+            height: 85%;
+            left: 0;
+            border-left: 3px solid transparent;
+            border-radius: 1px;
+            @include block-shadow(transparent);
+          }
+          &:hover:before {
+            border-left: 3px solid $primary;
+            @include block-shadow($primary);
+          }
+          &.item-primary:hover:before {
+            border-left: 3px solid $primary;
+            @include block-shadow($primary);
+          }
+          &.item-danger:hover:before {
+            border-left: 3px solid $danger;
+            @include block-shadow($danger);
+          }
+          &.item-warning:hover:before {
+            border-left: 3px solid $warning;
+            @include block-shadow($warning);
+          }
+          &.item-success:hover:before {
+            border-left: 3px solid $success;
+            @include block-shadow($success);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@import "mixins";
+
+.main-menu {
+    font-size: 15px;
+    height: 100vh;
+    width: 280px;
+    position: fixed;
+    transition: all 0.3s ease;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 999;
+    background-color: rgba($dark, 0.8);
+    backdrop-filter: blur(8px);
+
+    .custom-icon {
+        width: 25px;
+        height: 20px;
+    }
+
+    .menu-header {
+        a {
+            margin-left: 10px;
+            font-size: 20px;
+            text-decoration: none;
+
+            &:hover {
+                color: $violet !important;
+            }
+        }
+    }
+
+    .expand-icon {
+        transition: all 0.3s ease;
+        transform: rotate(-90deg);
+    }
+
+    .expanded {
+        .expand-icon {
+            transform: rotate(0);
+        }
+    }
+
+    .category-title {
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .menu-fixed-toggle {
+        cursor: pointer;
+
+        &::before {
+            content: "radio_button_checked";
+        }
+    }
+
+    .menu-header {
+        justify-content: space-between;
+    }
+
+    .nav.nav-pills {
+        .nav-link {
+            transition: all 0.3s ease;
+            background-color: transparent;
+            color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            border: 2px solid transparent;
+
+            &:hover {
+                margin-left: 8px;
+            }
+
+            &.active {
+                color: $violet;
+                border: 2px solid $violet;
+                @include block-shadow($violet, 0.4);
+                border-radius: 8px;
+
+                .custom-icon {
+                    background-color: $violet;
+                }
+
+                &:hover {
+                    margin-left: unset;
+                }
+            }
+
+            .custom-icon {
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+    .material-select-body {
+        background-color: rgba($dark, 0.6);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .collapsed {
+        .main-menu {
+            .menu-fixed-toggle {
+                &::before {
+                    content: "radio_button_unchecked";
+                }
+            }
+
+            &:not(:hover) {
+                width: 96px;
+
+                .hidden-on-collapsed {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .main-menu {
+        width: 0;
+
+        .menu-fixed-toggle {
+            display: none;
+        }
+    }
+    .collapsed {
+        .main-menu {
+            width: 280px;
+            padding: 15px;
+
+            .menu-fixed-toggle {
+                display: none;
+            }
+        }
+    }
+}

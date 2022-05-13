@@ -1,0 +1,7 @@
+@mixin block-shadow($color, $glow:0.4) {
+  box-shadow: 0 0 10px rgba($color, $glow), inset 0 0 10px rgba($color, $glow);
+}
+
+@mixin block-shadow-lg($color, $glow:0.65) {
+  box-shadow: 0 5px 20px rgba($color, $glow), inset 0 0 10px rgba($color, $glow);
+}

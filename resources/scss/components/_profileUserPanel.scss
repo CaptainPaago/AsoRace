@@ -1,0 +1,101 @@
+.user-info-container {
+    position: relative;
+    z-index: 2;
+    min-height: 428px;
+    border-radius: $border-radius-lg;
+    .progress-bar {
+        position: relative;
+        overflow: visible;
+
+        .percents {
+            right: 0;
+            bottom: -30px;
+            position: absolute;
+            font-size: $h5-font-size;
+        }
+    }
+
+    .bg-top {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        z-index: -1;
+        border-radius: $border-radius-lg $border-radius-lg 0 0;
+    }
+
+    .content {
+        padding: 20px;
+        min-height: 130px;
+        border-radius: 0 0 $border-radius-lg $border-radius-lg;
+
+        .username {
+            font-size: $h3-font-size;
+        }
+
+        .email {
+            font-size: $h5-font-size;
+        }
+        .reg-date {
+            font-size: $h6-font-size;
+        }
+    }
+
+    .user-info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .user-image-container {
+            position: absolute;
+            bottom: 80%;
+            .level {
+                position: absolute;
+                bottom: 10%;
+                right: 10%;
+                width: 40px;
+                height: 40px;
+                background-color: $violet;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $light-gray;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .user-info-container {
+        min-height: 360px;
+
+        .progress-container {
+            font-size: 12px;
+
+            .progress-bar {
+                .percents {
+                    bottom: -25px;
+                    font-size: $h6-font-size;
+                }
+            }
+        }
+        .content {
+            padding: 15px 0 20px 0;
+            .username {
+                font-size: $h6-font-size;
+            }
+            .email {
+                font-size: $small-font-size;
+            }
+            .reg-date {
+                font-size: $small-font-size;
+            }
+        }
+    }
+}

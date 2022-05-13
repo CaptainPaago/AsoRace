@@ -1,0 +1,42 @@
+@mixin alert-mixin($color, $textColor) {
+  background: rgba($color, 0.15)!important;
+  border: 3px solid $color;
+  box-sizing: border-box;
+  @include block-shadow($color);
+  border-radius: $border-radius-lg;
+  .title {
+    color: $color;
+  }
+  .text {
+    color: rgba($textColor, 0.8);
+    font-weight: normal;
+    line-height: 1.2em;
+      @include media-breakpoint-down(lg) {
+          font-size: $small-font-size;
+      }
+  }
+}
+
+.alert {
+  &.alert-small {
+    .title {
+      font-size: 14px;
+    }
+  }
+
+  &.alert-danger {
+    @include alert-mixin(#EE2A58, #FEB3C5);
+  }
+  &.alert-blue {
+    @include alert-mixin($blue, #E0EFF4);
+  }
+  &.alert-success {
+    @include alert-mixin(#40D04F, #DFFBE2);
+  }
+  &.alert-warning {
+    @include alert-mixin(#FFC701, #FFF8DE);
+  }
+  &.alert-notice {
+    @include alert-mixin(#FFFFFF, #FFFFFF);
+  }
+}

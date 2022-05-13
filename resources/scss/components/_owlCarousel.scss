@@ -1,0 +1,32 @@
+.owl-carousel {
+  &.off {
+    display: block;
+  }
+  .owl-dots {
+    width:100%;
+    padding:0px;
+    margin: 0px 0px 30px;
+    list-style-type:none;
+    text-align:center;
+    .owl-dot {
+      display:inline-block;
+      outline: none;
+      width:15px;
+      height:15px;
+      background:Transparent;
+      -webkit-transition:all 0.5s;
+      transition:all 0.5s;
+      -webkit-border-radius:50%;
+      border-radius:50%;
+      border: 2px solid #3A3258;
+      margin:0 2.5px;
+      cursor:pointer;
+      position:relative;
+      &.active {
+        background:#7750F8;
+        -webkit-box-shadow:inset 0 0 0 2px rgba(0,0,0,.28);
+        box-shadow:inset 0 0 0 2px rgba(0,0,0,.28);
+      }
+    }
+  }
+}
