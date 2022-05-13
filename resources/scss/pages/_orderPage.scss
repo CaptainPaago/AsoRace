@@ -1,0 +1,35 @@
+@import "../components/variables";
+
+.order-page {
+    .check-info {
+        .check-item {
+            border-bottom: 2px dashed #2B2541;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: $small-font-size;
+            .h5 {
+                font-size: $h6-font-size;
+            }
+        }
+    }
+    .controls-btn-container {
+        @include media-breakpoint-down(sm) {
+            .btn {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    .write-review {
+        .material-textarea {
+            height: 126px;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    .live-chat {
+        padding: 0;
+    }
+}

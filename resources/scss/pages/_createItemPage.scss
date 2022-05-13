@@ -1,0 +1,80 @@
+.create-item-page {
+  .banner {
+    .banner-bg {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: $border-radius-lg;
+    }
+  }
+  .section-title {
+    display: flex;
+    align-items: center;
+    .custom-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .item-info-container {
+    .material-textarea {
+      height: 240px;
+    }
+  }
+  .upload-img-container {
+    .img-preview-list {
+      .img-container {
+        margin-right: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .custom-icon {
+          transition: .3s;
+          position: absolute;
+          background-color: white;
+          opacity: 0;
+        }
+        img {
+          transition: .3s;
+          border-radius: $border-radius-lg;
+          border: 2px solid #fff;
+          width: 50px;
+          height: 50px;
+        }
+        &:hover {
+          img {
+            opacity: 0.4;
+          }
+          .custom-icon {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .file-upload-container {
+    .custom-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+  .file-text-container {
+    .material-textarea {
+      height: 172px;
+    }
+  }
+
+  .levels-progress {
+    .progress-bar {
+      position: relative;
+      overflow: visible;
+
+      .percents {
+        right: 0;
+        bottom: -30px;
+        position: absolute;
+        font-size: $h5-font-size;
+      }
+    }
+  }
+}

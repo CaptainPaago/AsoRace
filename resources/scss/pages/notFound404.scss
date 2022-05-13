@@ -1,0 +1,93 @@
+@import "../components/variables";
+@import "../components/text";
+
+html, body {
+  overflow-y: unset;
+}
+
+body {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  background: url("../../../images/notFound/galaxy.png") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  .content {
+    min-height: 100vh;
+    align-items: center;
+    .title {
+      margin-left: 10vw;
+      margin-bottom: 30vh;
+    }
+  }
+}
+
+.scene {
+  position: absolute;
+  overflow: hidden;
+  img {
+    margin-left: 70vw;
+    margin-top: 65vh;
+    width: 200px;
+  }
+}
+
+
+.warning-text {
+  @include text-stroke-shadow($red, 2px, 0.4);
+  white-space: nowrap;
+  font-weight: 900;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+h1 {
+  @include text-stroke-shadow($yellow, 4px, 0.3);
+  white-space: nowrap;
+  font-weight: 900;
+  font-size: 184px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background: url("../../../images/notFound/mobBg.png") no-repeat center;
+    background-size: cover;
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      padding-top: 10vh;
+      .title {
+        margin-left: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .scene {
+    position: absolute;
+    overflow: hidden;
+    img {
+      margin-left: 55vw;
+      margin-top: 80vh;
+      width: 140px;
+    }
+  }
+  .warning-text {
+    @include text-stroke-shadow($red, 2px);
+    white-space: nowrap;
+    font-weight: 900;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    @include text-stroke-shadow($yellow, 4px, 0.8, 35px);
+    white-space: nowrap;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+}

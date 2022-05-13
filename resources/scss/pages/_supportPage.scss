@@ -1,0 +1,65 @@
+.support-page {
+    .banner {
+        overflow: hidden;
+        background: url("../../../images/support/bannerBg.png") no-repeat center;
+        background-size: cover;
+        min-height: 300px;
+        padding: 0 8%;
+        border-radius: $border-radius-md;
+        .content {
+            display: flex;
+            align-items: center;
+            p {
+                line-height: 150%;
+                padding-right: 40%;
+                z-index: 2;
+            }
+        }
+        .scene {
+            z-index: 0;
+            right: 0;
+            .img-container {
+                img {
+                    width: 20vw;
+                }
+            }
+        }
+    }
+
+    .page-nav {
+        .live-chat-title {
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            @include text-stroke-shadow($light-red, 1.5px, 0.4, 20px);
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .banner {
+            background: url("../../../images/support/bg-mob.png") no-repeat center;
+            background-size: cover;
+            min-height: unset;
+            .content {
+                p {
+                    font-size: 12px;
+                    padding-right: 20%;
+                }
+            }
+            .scene {
+                right: -8%;
+                .img-container {
+                    img {
+                        width: 26vw;
+                        transform: rotate(-46deg);
+                    }
+                }
+            }
+        }
+        .page-nav {
+            .live-chat-title {
+                font-size: unset;
+                @include text-stroke-shadow($light-red, 1px, 0.4, 20px);
+            }
+        }
+    }
+}

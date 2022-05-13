@@ -1,0 +1,35 @@
+.seller-profile-page {
+    .statistics {
+        .number {
+            font-size: 36px;
+            white-space: nowrap;
+        }
+        .text {
+            font-size: 18px;
+            line-height: 1em;
+        }
+    }
+    @include media-breakpoint-down(xl) {
+        .statistics {
+            .number {
+                font-size: 20px;
+                -webkit-text-stroke-width: 1.5px;
+            }
+            .text {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .statistics {
+            .number {
+                font-size: 20px;
+                -webkit-text-stroke-width: 1px;
+            }
+            .text {
+                font-size: 12px;
+            }
+        }
+    }
+}

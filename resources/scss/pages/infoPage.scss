@@ -1,0 +1,152 @@
+@import "../components/mixins";
+@import "../components/variables";
+@import "../components/text";
+
+@mixin nav-link-mixin($color) {
+  transition: all 0.3s ease;
+  border-radius: $border-radius-lg!important;
+  background-color: $dark;
+  color: rgba($color, 0.5);
+  border: 2px solid transparent;
+  &.active {
+    color: $color;
+    background-color: $dark;
+    border: 2px solid $color;
+    @include block-shadow($color);
+    .custom-icon {
+      background: $color;
+    }
+  }
+  .custom-icon {
+    background: rgba($color, 0.5);
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.banner {
+  background: url("../../../images/info/maskGroup.png") no-repeat center;
+  background-size: cover;
+  height: 300px;
+  padding: 0 8%;
+  border-radius: $border-radius-lg;
+
+  .content {
+    padding: 30px 0;
+  }
+
+  .form-control {
+    border: none;
+    background-color: rgba($dark, 0.7);
+    padding: 30px 21px 30px 54px;
+    border-radius: $border-radius-md;
+    color: $light-gray;
+    width: 50%;
+    &:focus {
+      outline:0px !important;
+      -webkit-appearance:none;
+      box-shadow: none !important;
+    }
+    &::placeholder {
+      color: $light-gray;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    background: url("../../../images/info/maskGroup.png") no-repeat 60%;
+    .form-control {
+      width: 100%;
+    }
+    height: unset;
+  }
+}
+
+.nav-info {
+  .nav {
+    margin-bottom: 20px;
+    width: 260px;
+    .nav-link {
+      display: flex;
+      padding: 20px 30px;
+      margin-bottom: 20px;
+      .title {
+        font-size: 18px;
+        line-height: 1em;
+      }
+      .text {
+        font-size: 12px;
+      }
+    }
+    .nav-link-yellow {
+      @include nav-link-mixin($yellow);
+    }
+    .nav-link-light-red {
+      @include nav-link-mixin($light-red);
+    }
+    .nav-link-green {
+      @include nav-link-mixin($green);
+    }
+    .nav-link-blue {
+      @include nav-link-mixin($blue);
+    }
+    .nav-link-violet {
+      @include nav-link-mixin($violet);
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      .nav-link {
+        width: 140px;
+        box-sizing: border-box;
+        display: flex;
+        margin-right: 15px;
+        margin-bottom: 0;
+        padding: 10px 15px;
+        .title {
+          font-size: 14px;
+        }
+        .text {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+  .accordion-item {
+    transition: all 0.3s ease;
+    border-radius: $border-radius-md;
+    background-color: $dark;
+    border: 2px solid transparent;
+    .toggle-icon {
+      transition: transform 0.3s ease;
+      transform: rotate(-90deg);
+      width: 26px;
+      height: 26px;
+    }
+    .title {
+      font-size: 18px;
+    }
+    &.expanded {
+      border: 2px solid $violet;
+      @include block-shadow($violet);
+      .title {
+        @extend .text-light-gray;
+      }
+      .toggle-icon {
+        transform: rotate(0);
+      }
+    }
+    @media screen and (max-width: 992px) {
+      .toggle-icon {
+        width: 20px;
+        height: 20px;
+      }
+      .title {
+        font-size: 14px;
+      }
+      .text {
+        font-size: 10px;
+      }
+      .toggle-icon {
+        font-size: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@import "../components/mixins";
+@import "../components/variables";
+@import "../components/text";
+
+$bgSmokeImage: url("../../../images/comingSoon/comingBgSmoke.png");
+$bgSpaceShuttleImage: url("../../../images/comingSoon/spaceShuttle.png");
+$bgStarsImage: url("../../../images/comingSoon/stars.png");
+$bgImage: url("../../../images/comingSoon/comingBg.png");
+$bgImageMob: url("../../../images/comingSoon/comingBgMob.png");
+
+body {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  background:
+          $bgSmokeImage no-repeat center,
+          $bgSpaceShuttleImage no-repeat 70% bottom,
+          $bgStarsImage no-repeat 80% 0,
+          $bgImage no-repeat left;
+  background-size: cover, 40vh auto, 60vw auto, 100vw 100vh;
+  height: 100vh;
+
+  .content {
+    position: absolute;
+    right: 48%;
+  }
+}
+
+.btn {
+  padding-top: unset!important;
+  padding-bottom: unset!important;
+}
+
+h1 {
+  @include text-stroke-shadow($yellow, 2px);
+  white-space: nowrap;
+  font-weight: 900;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.count-down {
+  & > div {
+    width: 8em;
+    .number {
+      @include text-stroke-shadow($blue, 4px);
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 64px;
+    }
+  }
+}
+
+form {
+  .form-control {
+    color: #fff;
+    border: 3px solid $green;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba($green, 0.65);
+    background-color: rgba(#2B2541, 0.4);
+
+    height: 100% !important;
+
+    &:focus {
+      background-color: rgba(#2B2541, 0.4);
+      color: #fff;
+      border: 3px solid $green;
+    }
+
+    &::placeholder {
+      color: #fff;
+      opacity: 0.7;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  body {
+    background:
+            $bgSmokeImage no-repeat center,
+            $bgSpaceShuttleImage no-repeat 80% bottom,
+            $bgStarsImage no-repeat center,
+            $bgImage no-repeat left;
+    background-size: cover, 40vh auto, auto, 110vw 100vh;
+    .content {
+      position: unset;
+      margin: 0 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 986px) {
+  body {
+    background:
+            $bgSmokeImage no-repeat -30vw bottom,
+            $bgSpaceShuttleImage no-repeat center bottom,
+            $bgStarsImage no-repeat center bottom,
+            $bgImageMob no-repeat center;
+    background-size: 130vw auto, 20vh auto, auto 60vh, cover;
+    .content {
+      width: 100%;
+      position: unset;
+      margin: 0;
+      margin-top: 10vh;
+    }
+    font-size: 13px;
+  }
+  .title, form {
+    margin: 0 10px;
+  }
+  h1 {
+    @include text-stroke-shadow($yellow, 1px);
+    font-size: 32px;
+    white-space: unset;
+  }
+  .count-down {
+    & > div {
+      width: 5em;
+      .number {
+        @include text-stroke-shadow($blue, 2px);
+        font-size: 34px;
+      }
+    }
+  }
+  form {
+    .btn {
+      font-size: 14px!important;
+    }
+  }
+}

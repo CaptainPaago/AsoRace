@@ -1,0 +1,97 @@
+.promotion-page {
+  .banner {
+    .banner-bg {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: $border-radius-lg;
+    }
+  }
+  .promotion-plan {
+    .services {
+      .services-item {
+        display: flex;
+        .custom-icon {
+          width: 20px;
+          height: 12px;
+          margin-top: 4px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .description {
+      font-size: $small-font-size;
+      color: rgba(#FFFFFF, 0.2);
+    }
+    .title {
+      font-size: $h3-font-size;
+    }
+    .price {
+      font-size: $h3-font-size;
+    }
+    .plan-img {
+      width: 120px;
+    }
+    &.promotion-plan-warning {
+      border: 2px solid $warning;
+      @include block-shadow($warning);
+      .title {
+        @include text-stroke-shadow($warning);
+        -webkit-text-stroke-width: 1.5px;
+        font-weight: $font-weight-bolder;
+      }
+      .price {
+        @include text-glow-mixin($warning)
+      }
+    }
+    &.promotion-plan-danger {
+      border: 2px solid $danger;
+      @include block-shadow($danger);
+      .title {
+        @include text-stroke-shadow($danger);
+        -webkit-text-stroke-width: 1.5px;
+        font-weight: $font-weight-bolder;
+      }
+      .price {
+        @include text-glow-mixin($danger)
+      }
+    }
+    &.promotion-plan-primary {
+      border: 2px solid $primary;
+      @include block-shadow($primary);
+      .title {
+        @include text-stroke-shadow($primary);
+        -webkit-text-stroke-width: 1.5px;
+        font-weight: $font-weight-bolder;
+      }
+      .price {
+        @include text-glow-mixin($primary)
+      }
+    }
+  }
+
+  .promotion-table {
+    .promotion-table-header {
+      font-size: $small-font-size;
+    }
+    .item, .promotion-table-header {
+      width: fit-content;
+      min-width: 100%;
+      .content {
+        min-width: 100%;
+        .item-title {
+          width: 400px;
+        }
+        .plan {
+          width: 190px;
+        }
+        .date {
+          width: 100px;
+        }
+        .refill {
+          width: 370px;
+        }
+      }
+    }
+  }
+}

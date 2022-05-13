@@ -1,0 +1,54 @@
+.seller-chat-page {
+    .back-btn {
+        font-weight: 900;
+        @include text-stroke-shadow($green, 1px, 0.4, 20px);
+        font-size: $h3-font-size;
+        text-decoration: none;
+        .custom-icon {
+            transform: rotate(90deg);
+            height: 18px;
+            width: 18px
+        }
+    }
+    .active-chat-info {
+        background-color: #171322;
+        border-radius: $border-radius-lg $border-radius-lg 0 0;
+        .username {
+            font-size: $h4-font-size;
+            color: #fff;
+        }
+        .online-status {
+            font-size: $h6-font-size;
+        }
+    }
+    .live-chat {
+        border-radius: 0 0 $border-radius-lg $border-radius-lg;
+        .message {
+            width: 80%;
+            @include media-breakpoint-down(xl) {
+                width: 100%;
+            }
+        }
+    }
+    .item {
+        @include item-mixin($light-green);
+        .username {
+            font-size: $h5-font-size;
+            color: #fff;
+        }
+        .text {
+            font-size: $h6-font-size;
+        }
+        .message-count {
+            border-radius: 50%;
+            background-color: $light-green;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: $h5-font-size;
+        }
+    }
+}

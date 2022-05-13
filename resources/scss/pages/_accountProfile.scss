@@ -1,0 +1,76 @@
+.user-profile {
+    .page-nav {
+        .setting-btn {
+            color: $violet;
+            text-decoration: none;
+            .custom-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .statistics {
+        .number {
+            font-size: 36px;
+            white-space: nowrap;
+        }
+        .text {
+            font-size: 18px;
+            line-height: 1em;
+        }
+    }
+
+    .item {
+        .custom-icon {
+            width: 24px;
+            height: 24px;
+        }
+        .status-container {
+            font-size: $h5-font-size;
+            width: 160px;
+        }
+        .amount-container {
+            font-size: $h5-font-size;
+        }
+        @include media-breakpoint-down(xs) {
+            .custom-icon {
+                width: 20px;
+                height: 20px;
+            }
+            .status-container {
+                font-size: $h6-font-size;
+                width: 124px;
+            }
+            .amount-container {
+                font-size: $h6-font-size;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        .statistics {
+            .number {
+                font-size: 20px;
+                -webkit-text-stroke-width: 1.5px;
+            }
+            .text {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .statistics {
+            .number {
+                font-size: 20px;
+                -webkit-text-stroke-width: 1px;
+            }
+            .text {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+

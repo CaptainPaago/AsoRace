@@ -1,0 +1,31 @@
+.transaction-history-page {
+  .banner {
+    .banner-bg {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: $border-radius-lg;
+    }
+  }
+  .transaction-list {
+    .transaction-list-header {
+      font-size: $small-font-size;
+    }
+    .item, .transaction-list-header {
+      width: fit-content;
+      min-width: 100%;
+      .content {
+        min-width: 100%;
+        .type {
+          width: 100px;
+        }
+        .item-title {
+          width: 360px;
+        }
+        .date {
+          width: 100px;
+        }
+      }
+    }
+  }
+}

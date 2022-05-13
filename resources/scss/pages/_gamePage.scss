@@ -1,0 +1,255 @@
+.game-page {
+    .chart-container {
+        background-color: $dark;
+        border-radius: $border-radius-lg;
+        color: rgba(255, 255, 255, 0.4);
+
+        .arrow_box {
+            background-color: $dark;
+            border: 2px solid $violet;
+            color: $violet;
+            padding: 0 5px;
+        }
+
+        .focus-options {
+            span {
+                cursor: pointer;
+                margin-right: 15px;
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.active {
+                    @include text-glow-mixin($violet);
+                }
+            }
+        }
+    }
+
+    .product-cards-container {
+        .info-card {
+            .number {
+                font-size: $h1-font-size;
+            }
+
+            .text {
+                font-size: $h5-font-size;
+                text-align: center;
+            }
+
+            .custom-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            @include media-breakpoint-down(xs) {
+                .custom-icon {
+                    width: 20px;
+                    height: 20px;
+                }
+                .number {
+                    font-size: $h6-font-size;
+                    -webkit-text-stroke-width: 1px;
+                }
+                .text {
+                    font-size: $small-font-size;
+                    line-height: 1em;
+                }
+            }
+        }
+    }
+
+    .add-to-wishlist {
+        color: $gray;
+        border: 2px solid $light-red;
+        @include block-shadow($light-red);
+        background-color: $dark;
+
+        &:link {
+            color: $gray;
+        }
+
+        &:visited {
+            color: $gray;
+        }
+
+        &:hover {
+            color: $gray;
+        }
+
+        &:active {
+            color: $gray;
+        }
+    }
+
+    .order-container {
+        .price-pane {
+            background: #2B2541;
+            border-radius: $border-radius-md;
+
+            .text {
+                color: rgba(#fff, 0.5);
+                font-size: 10px;
+            }
+
+            .price {
+                font-size: $h1-font-size;
+            }
+
+            .old-price {
+                font-size: $h4-font-size;
+            }
+
+            @include media-breakpoint-down(xs) {
+                .price {
+                    font-size: $h5-font-size;
+                }
+                .old-price {
+                    font-size: $small-font-size;
+                }
+                .text {
+                    font-size: 8px;
+                }
+            }
+        }
+
+        .buy-btn {
+            @include media-breakpoint-down(xs) {
+                font-size: $h6-font-size;
+            }
+        }
+
+        .icon-cart {
+            width: 26px;
+            height: 26px;
+            @include media-breakpoint-down(xs) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .side-col {
+        width: 400px;
+    }
+
+    .author {
+        background-color: $dark;
+        border-radius: $border-radius-md;
+        .social-links {
+            .custom-icon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        @include media-breakpoint-down(xxs) {
+            .progress {
+                width: 68px;
+            }
+        }
+    }
+
+    #image-list {
+        position: relative;
+        border-radius: $border-radius-lg;
+
+        .carousel-inner {
+            .carousel-item {
+                img {
+                    height: 436px;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: $border-radius-lg;
+                    @include media-breakpoint-down(xxl) {
+                        height: 400px;
+                    }
+                    @include media-breakpoint-down(xs) {
+                        height: 220px;
+                    }
+                }
+            }
+        }
+
+        .list-inline {
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+
+        .carousel-indicators-container {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            display: flex;
+            bottom: 0;
+            background: rgba(#1B1628, 0.7);
+
+            .carousel-control-prev, .carousel-control-next {
+                width: 80px;
+                @include media-breakpoint-down(xs) {
+                    width: 40px;
+                }
+            }
+            .carousel-control-next-icon, .carousel-control-prev-icon {
+                @include media-breakpoint-down(xs) {
+                    width: 14px;
+                    height: 14px;
+                }
+                @include media-breakpoint-down(xxs) {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+
+        .carousel-indicators {
+            position: initial;
+            justify-content: center;
+            padding: 10px 0;
+
+            & > li {
+                width: initial;
+                height: initial;
+                text-indent: initial;
+                background-color: transparent;
+                opacity: 1;
+                border: 2px solid transparent;
+                border-radius: $border-radius-lg;
+                overflow: hidden;
+                margin: 0 10px;
+
+                img {
+                    width: 75px;
+                    height: 75px;
+                    object-fit: cover;
+                }
+
+                @include media-breakpoint-down(xxxxl) {
+                    margin: 0 5px;
+                    img {
+                        width: 58px;
+                        height: 58px;
+                    }
+                }
+                @include media-breakpoint-down(xs) {
+                    margin: 0 3px;
+                    img {
+                        width: 38px;
+                        height: 38px;
+                    }
+                }
+
+                @include media-breakpoint-down(xxs) {
+                    margin: 0 2px;
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                &.active {
+                    border: 2px solid white;
+                }
+            }
+        }
+    }
+}

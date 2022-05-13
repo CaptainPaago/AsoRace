@@ -1,0 +1,41 @@
+.promocode-page {
+  .banner {
+    .banner-bg {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: $border-radius-lg;
+    }
+  }
+  .promocode-list {
+    .promocode-list-header {
+      font-size: $small-font-size;
+    }
+    .item, .promocode-list-header {
+      width: fit-content;
+      min-width: 100%;
+
+      .content {
+        min-width: 100%;
+        .promocode {
+          width: 100px;
+        }
+        .item-title {
+          width: 360px;
+        }
+        .sale-amount {
+          width: 74px;
+        }
+        .expiration-date {
+          width: 100px;
+        }
+        .users {
+          width: 50px;
+        }
+        .usages-left {
+          width: 64px;
+        }
+      }
+    }
+  }
+}

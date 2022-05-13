@@ -1,0 +1,254 @@
+.item-stat-page {
+  .banner {
+    .banner-bg {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: $border-radius-lg;
+    }
+  }
+
+  .chart-container {
+    background-color: $dark;
+    border-radius: $border-radius-lg;
+    color: rgba(255, 255, 255, 0.4);
+
+    .arrow_box {
+      background-color: $dark;
+      padding: 0 5px;
+    }
+
+    .focus-options {
+      span {
+        cursor: pointer;
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &#apexSalesNumber {
+      .focus-options {
+        span.active {
+          font-weight: bold;
+          @include text-glow-mixin($light-red);
+        }
+      }
+
+      .arrow_box {
+        border: 2px solid $light-red;
+        color: $light-red;
+      }
+    }
+
+    &#apexSalesAmount {
+      .focus-options {
+        span.active {
+          font-weight: bold;
+          @include text-glow-mixin($violet);
+        }
+      }
+
+      .arrow_box {
+        border: 2px solid $violet;
+        color: $violet;
+      }
+    }
+  }
+
+  .alert-list {
+    max-height: 572px;
+    overflow-y: auto;
+    @include media-breakpoint-down(xl) {
+      max-height: 400px;
+    }
+  }
+
+  .statistics {
+    .number {
+      font-size: 36px;
+      white-space: nowrap;
+    }
+
+    .text {
+      font-size: 18px;
+      line-height: 1em;
+    }
+  }
+
+  .promocodes-popover-toggle {
+    &:focus {
+      outline: none;
+    }
+    .custom-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .popover {
+    background-color: $dark;
+    border: 2px solid $info;
+    .arrow {
+      &:before {
+        display: none;
+      }
+      &:after {
+        border-top-color: $info;
+      }
+    }
+    .popover-body {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .promocodes-popover {
+      .custom-ol {
+        margin-bottom: 0;
+        li {
+          margin: 15px 0;
+          &::before {
+            -webkit-text-stroke-color: $info;
+            border-color: $info;
+          }
+          .promocode {
+            text-align: center;
+            min-width: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-tabs-underlined {
+    .item {
+      .text {
+        font-size: $h5-font-size;
+        @include media-breakpoint-down(lg) {
+          font-size: $h6-font-size;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    .statistics {
+      .number {
+        font-size: 20px;
+        -webkit-text-stroke-width: 1.5px;
+      }
+
+      .text {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .statistics {
+      .number {
+        font-size: 20px;
+        -webkit-text-stroke-width: 1px;
+      }
+
+      .text {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .auto-refill {
+    position: relative;
+
+    .question-link {
+      position: absolute;
+      right: 10px;
+      bottom: 15px;
+
+      .custom-icon {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .change-plan {
+    .title {
+      font-size: $h5-font-size;
+      -webkit-text-stroke-width: 1.5px;
+    }
+
+    .plan-img {
+      width: 69px;
+      height: 69px;
+      flex: none;
+    }
+  }
+
+  .review {
+    .material-textarea {
+      height: 120px;
+    }
+
+    form {
+      .btn {
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .orders {
+    .bottom {
+      .material-input {
+        width: 335px;
+      }
+    }
+
+    .item {
+      width: fit-content;
+      min-width: 100%;
+
+      .content {
+        min-width: 100%;
+
+        .user {
+          width: 150px;
+        }
+
+        .date {
+          width: 70px;
+        }
+
+        .promocode {
+          width: 100px;
+        }
+
+        .review {
+          width: 50px;
+        }
+
+        .chat-link {
+          width: 50px;
+          position: relative;
+          text-align: right;
+
+          &.active {
+            &:after {
+              content: "";
+              width: 5px;
+              height: 5px;
+              position: absolute;
+              border-radius: 50%;
+              top: 0;
+              right: -5px;
+              background-color: $warning;
+              @include block-shadow($warning);
+            }
+          }
+        }
+      }
+    }
+  }
+}

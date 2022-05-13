@@ -1,0 +1,47 @@
+.cart-page {
+    .side-col {
+        width: 500px;
+    }
+
+    .bonus-progress {
+        .price, .text {
+            font-size: $h5-font-size;
+        }
+        .bonus-title {
+            font-size: $h3-font-size;
+        }
+        .icon-gift {
+            width: 124px;
+            height: 124px;
+        }
+        @include media-breakpoint-down(sm) {
+            .price, .text {
+                font-size: $h6-font-size;
+            }
+            .bonus-title {
+                font-size: $h5-font-size;
+            }
+            .icon-gift {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+
+    .card-info {
+        .custom-icon {
+            background-color: initial;
+        }
+        .dashed-divider {
+            width: 100%;
+            border-bottom: 2px dashed $light-dark;
+            height: 2px;
+        }
+    }
+
+    .check-sum {
+        font-size: $h5-font-size;
+    }
+
+
+}

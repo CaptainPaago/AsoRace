@@ -1,0 +1,107 @@
+.seller-dashboard-page {
+    .chart-container {
+        background-color: $dark;
+        border-radius: $border-radius-lg;
+        color: rgba(255, 255, 255, 0.4);
+        .arrow_box {
+            background-color: $dark;
+            padding: 0 5px;
+        }
+        .focus-options {
+            span {
+                cursor: pointer;
+                margin-right: 15px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        &#apexSalesNumber {
+            .focus-options {
+                span.active {
+                    font-weight: bold;
+                    @include text-glow-mixin($light-red);
+                }
+            }
+            .arrow_box {
+                border: 2px solid $light-red;
+                color: $light-red;
+            }
+        }
+        &#apexSalesAmount {
+            .focus-options {
+                span.active {
+                    font-weight: bold;
+                    @include text-glow-mixin($violet);
+                }
+            }
+            .arrow_box {
+                border: 2px solid $violet;
+                color: $violet;
+            }
+        }
+    }
+
+    .alert-list {
+        max-height: 572px;
+        overflow-y: auto;
+        @include media-breakpoint-down(xl) {
+            max-height: 400px;
+        }
+    }
+
+    .item {
+        .controls {
+            transition: all 0.3s ease;
+            opacity: 0.6;
+        }
+        &:hover {
+            .controls {
+                opacity: 1;
+            }
+        }
+    }
+    .statistics {
+        .number {
+            font-size: 36px;
+            white-space: nowrap;
+        }
+        .text {
+            font-size: 18px;
+            line-height: 1em;
+        }
+    }
+    .nav-tabs-underlined {
+        .item {
+            .text {
+                font-size: $h5-font-size;
+                @include media-breakpoint-down(lg) {
+                    font-size: $h6-font-size;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xl) {
+        .statistics {
+            .number {
+                font-size: 20px;
+                -webkit-text-stroke-width: 1.5px;
+            }
+            .text {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .statistics {
+            .number {
+                font-size: 20px;
+                -webkit-text-stroke-width: 1px;
+            }
+            .text {
+                font-size: 12px;
+            }
+        }
+    }
+}

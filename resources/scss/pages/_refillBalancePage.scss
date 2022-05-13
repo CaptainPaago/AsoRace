@@ -1,0 +1,41 @@
+.refill-balance-page {
+  .payment-variant {
+    .payment-img-container {
+      width: 78px;
+      height: 24px;
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+  .amount-form {
+    .text {
+      font-size: $h5-font-size;
+      @include media-breakpoint-down(lg) {
+        font-size: $h6-font-size;
+      }
+    }
+    .material-input {
+      width: 340px;
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
+  }
+  .banner {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: url("../../images/refillBalance/banner.png") no-repeat center;
+    background-size: cover;
+    @include media-breakpoint-down(lg) {
+      height: 240px;
+    }
+  }
+  #paymentModal {
+    .payment-variant-img {
+      height: 40px;
+    }
+  }
+}

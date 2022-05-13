@@ -1,0 +1,75 @@
+.user-settings-page {
+  .banner {
+    .banner-bg {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: $border-radius-lg;
+    }
+  }
+  .password-form, .info-form, .payment-settings, .start-selling-container, .remove-account-container {
+    .btn {
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+  .start-selling-container, .remove-account-container {
+    @include media-breakpoint-down(sm) {
+      font-size: $small-font-size;
+    }
+  }
+  .authentication-settings {
+    .title {
+      font-size: $h3-font-size;
+      font-weight: 900;
+      -webkit-text-stroke-width: 1.5px;
+    }
+    .text {
+      font-size: $h6-font-size;
+    }
+    @include media-breakpoint-down(xs) {
+      .title {
+        font-size: $h4-font-size;
+        -webkit-text-stroke-width: 1px;
+      }
+    }
+  }
+  .payment-settings {
+    .payment-img-container {
+      width: 78px;
+      height: 32px;
+      margin-bottom: 20px;
+      @include media-breakpoint-down(xs) {
+        width: 48px;
+        height: 20px;
+        margin-bottom: 10px;
+      }
+      img {
+        height: 100%;
+      }
+    }
+    .status {
+      white-space: nowrap;
+      @include media-breakpoint-down(xs) {
+        font-size: 10px;
+      }
+    }
+  }
+  .modal {
+    .material-input {
+      width: 300px;
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+      }
+    }
+  }
+  .owl-carousel.off {
+    display: flex;
+  }
+  .owl-carousel {
+    width: initial;
+  }
+}
