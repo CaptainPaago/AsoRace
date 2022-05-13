@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.content {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.link-reset {
+    color: #ffffff;
+}
+
+.login_register {
+    padding: 50px;
+    background-color: #0b7c23;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.login_register h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.login_register input {
+    display: block;
+    width: 350px;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.login_register .checkbox input {
+    display: inline;
+    width: auto;
+}
+
+.login_register button {
+    display: block;
+    margin: 15px auto;
+    padding: 15px 35px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    outline: none;
+    cursor: pointer;
+}
+
+body {
+    font-size: 16px;
+    color: #ffffffb3;
+    background: url(../../../images/comingSoon/oopl_19_museum_exhibit_2.jpg) no-repeat center,
+      url() no-repeat 70% bottom,
+      url() no-repeat 80% 0,
+      url() no-repeat left;
+    background-size: cover, 40vh auto, 60vw auto, 100vw 100vh;
+    height: 100vh;
+  }
+
+@media screen and (max-width: 1400px) {
+    body {
+      background: url(../../../images/comingSoon/oopl_19_museum_exhibit_2.jpg) no-repeat
+          center,
+        url() no-repeat 80% bottom,
+        url() no-repeat center,
+        url() no-repeat left;
+      background-size: cover, 40vh auto, auto, 110vw 100vh;
+    }
+    body .content {
+      position: unset;
+      margin: 0 40px;
+    }
+  }
+  @media screen and (max-width: 986px) {
+    body {
+      background: url(../../../images/comingSoon/oopl_19_museum_exhibit_2.jpg) no-repeat -30vw
+          bottom,
+        url() no-repeat center bottom,
+        url() no-repeat center bottom,
+        url() no-repeat center;
+      background-size: 130vw auto, 20vh auto, auto 60vh, cover;
+      font-size: 13px;}
+    }
