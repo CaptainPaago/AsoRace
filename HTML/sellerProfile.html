@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet">
+    <title>Seller profile</title>
+</head>
+<body>
+<nav class="main-menu p-3">
+    <div class="menu-header d-flex align-items-center mb-2">
+        <a class="d-flex align-items-center" href="index.html">
+            <span class="material-icons md-36 text-primary">sports_esports</span>
+            <p class="h5 mb-0 text-nowrap hidden-on-collapsed ml-2 text-primary">Games System</p>
+        </a>
+        <div class="hidden-on-collapsed">
+            <span id="menu-fixed-toggle" class="material-icons text-primary"></span>
+        </div>
+    </div>
+    <div class="nav accordion flex-column nav-pills" id="menu-nav" role="tablist"
+         aria-orientation="vertical">
+        <a class="nav-link d-flex" href="#">
+            <span class="material-icons">home</span>
+            <span class="hidden-on-collapsed ml-2">Home</span>
+        </a>
+        <p class="category-title ml-3 mt-4 mb-2 hidden-on-collapsed">Market</p>
+        <div>
+            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle"
+                 type="button">
+                <div class="d-flex">
+                    <span class="material-icons">sports_esports</span>
+                    <span class="hidden-on-collapsed ml-2">Games</span>
+                </div>
+                <span class="material-icons hidden-on-collapsed expand-icon">expand_more</span>
+            </div>
+            <div class="collapse hidden-on-collapsed pl-2"
+                 data-parent="#menu-nav">
+                <a class="nav-link d-flex align-items-center" href="#">
+                    <span class="material-icons md-10">trip_origin</span>
+                    <span class="ml-3">Keys/License</span>
+                </a>
+                <a class="nav-link d-flex align-items-center" href="#">
+                    <span class="material-icons md-10">trip_origin</span>
+                    <span class="ml-3">Accounts</span>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle"
+                 type="button">
+                <div class="d-flex">
+                    <span class="material-icons">view_module</span>
+                    <span class="hidden-on-collapsed ml-2">Services</span>
+                </div>
+                <span class="material-icons hidden-on-collapsed expand-icon">expand_more</span>
+            </div>
+            <div class="collapse hidden-on-collapsed pl-2"
+                 data-parent="#menu-nav">
+                <a class="nav-link d-flex align-items-center active" href="#">
+                    <span class="material-icons md-10">trip_origin</span>
+                    <span class="ml-3">Farm</span>
+                </a>
+                <a class="nav-link d-flex align-items-center" href="#">
+                    <span class="material-icons md-10">trip_origin</span>
+                    <span class="ml-3">Boost</span>
+                </a>
+                <a class="nav-link d-flex align-items-center" href="#">
+                    <span class="material-icons md-10">trip_origin</span>
+                    <span class="ml-3">Achievements</span>
+                </a>
+                <a class="nav-link d-flex align-items-center" href="#">
+                    <span class="material-icons md-10">trip_origin</span>
+                    <span class="ml-3">Other</span>
+                </a>
+            </div>
+        </div>
+        <p class="category-title ml-3 mt-3 mb-2 hidden-on-collapsed">Market</p>
+        <a class="nav-link d-flex" href="#">
+            <span class="material-icons">format_list_bulleted</span>
+            <span class="hidden-on-collapsed ml-2">Items</span>
+        </a>
+        <a class="nav-link d-flex" href="#">
+            <span class="material-icons">local_offer</span>
+            <span class="hidden-on-collapsed ml-2">Discounts</span>
+        </a>
+        <a class="nav-link d-flex" href="#">
+            <span class="material-icons">casino</span>
+            <span class="hidden-on-collapsed ml-2">Luck</span>
+        </a>
+        <p class="category-title ml-3 mt-3 mb-2 hidden-on-collapsed">Market</p>
+        <a class="nav-link d-flex" href="#">
+            <span class="material-icons">format_list_bulleted</span>
+            <span class="hidden-on-collapsed ml-2">Items</span>
+        </a>
+        <a class="nav-link d-flex" href="#">
+            <span class="material-icons">local_offer</span>
+            <span class="hidden-on-collapsed ml-2">Discounts</span>
+        </a>
+        <a class="nav-link d-flex" href="#">
+            <span class="material-icons">casino</span>
+            <span class="hidden-on-collapsed ml-2">Luck</span>
+        </a>
+        <div>
+            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle"
+                 type="button">
+                <div class="d-flex">
+                    <span class="material-icons">sports_esports</span>
+                    <span class="hidden-on-collapsed ml-2">Games</span>
+                </div>
+                <span class="material-icons hidden-on-collapsed expand-icon">expand_more</span>
+            </div>
+            <div class="collapse hidden-on-collapsed pl-2"
+                 data-parent="#menu-nav">
+                <a class="nav-link d-flex align-items-center" href="#">
+                    <span class="material-icons md-10">trip_origin</span>
+                    <span class="ml-3">Keys/License</span>
+                </a>
+                <a class="nav-link d-flex align-items-center" href="#">
+                    <span class="material-icons md-10">trip_origin</span>
+                    <span class="ml-3">Accounts</span>
+                </a>
+            </div>
+        </div>
+        <p class="category-title ml-3 mt-3 mb-2 hidden-on-collapsed text-uppercase">info</p>
+        <a class="nav-link d-flex active" href="support.html">
+            <span class="material-icons">sentiment_satisfied_alt</span>
+            <span class="hidden-on-collapsed ml-2">Support</span>
+        </a>
+        <a class="nav-link d-flex" href="info.html">
+            <span class="material-icons">help_outline</span>
+            <span class="hidden-on-collapsed ml-2">FAQ</span>
+        </a>
+    </div>
+</nav>
+<main class="px-4 py-3">
+    <header class="main-header px-4 d-flex mb-4 justify-content-between">
+        <div class="d-flex align-items-center my-3">
+            <span class="material-icons-outlined mr-4 md-30">shopping_cart</span>
+            <span class="material-icons mr-4 md-30">chat_bubble_outline</span>
+            <span class="material-icons text-glow-green mr-4 md-30">search</span>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center">
+                <div class="text-right mr-2">
+                    <p class="mb-0">Balance:</p>
+                    <p class="mb-0 balance-number">$ 1000.00</p>
+                </div>
+                <span class="material-icons text-green">add_circle_outline</span>
+            </div>
+            <div class="ml-5">
+                <div class="mb-2 d-flex align-items-center justify-content-between">
+                    <span class="">Level:</span>
+                    <span>93.61</span>
+                </div>
+                <div class="progress progress-tiny bg-light-green">
+                    <div class="progress-bar" role="progressbar" style="width: 80%"
+                         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="my-3 ml-4">
+                <span class="material-icons md-30">notifications_none</span>
+                <span class="material-icons-outlined md-30 ml-3">account_circle</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="user-info-container mb-4 d-flex align-items-end">
+        <img class="bg-top" src="../images/profile/topBg2.png" alt="">
+        <div class="content bg-dark d-flex justify-content-between align-items-center">
+            <div class="text-center user-info align-self-end">
+                <div class="user-image-container mb-3">
+                    <img class="user-image user-image-lg"
+                         src="https://source.unsplash.com/random" alt="">
+                    <span class="level">43</span>
+                </div>
+                <p class="text-white h3 font-weight-bold">John Doe</p>
+                <p class="mb-0">Registration date: 4/20/2018</p>
+            </div>
+            <div>
+                <button class="btn btn-green font-weight-bold px-4 mr-3">Subscribe</button>
+                <button class="btn btn-violet font-weight-bold px-4">Send Message</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col">
+            <div class="text-center bg-dark rounded-lg p-4">
+                <p class="h1 mb-3 font-weight-bolder text-stroke-glow-violet">75.13%</p>
+                <p class="h5 mb-0">rating</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="text-center bg-dark rounded-lg p-4">
+                <p class="h1 mb-3 font-weight-bolder text-stroke-glow-blue">160</p>
+                <p class="h5 mb-0">items</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="text-center bg-dark rounded-lg p-4">
+                <p class="h1 mb-3 font-weight-bolder text-stroke-glow-green">32480</p>
+                <p class="h5 mb-0">total sales</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="text-center bg-dark rounded-lg p-4">
+                <p class="h1 mb-3 font-weight-bolder text-stroke-glow-light-green">15</p>
+                <p class="h5 mb-0">refunds</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="text-center bg-dark rounded-lg p-4">
+                <p class="h1 mb-3 font-weight-bolder text-stroke-glow-yellow">923</p>
+                <p class="h5 mb-0">positive reviews</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="text-center bg-dark rounded-lg p-4">
+                <p class="h1 mb-3 font-weight-bolder text-stroke-glow-light-red">68</p>
+                <p class="h5 mb-0">negative reviews</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4 items-section">
+        <h2 class="h5 font-weight-bold mb-3">Items</h2>
+        <div class="nav-tabs-underlined">
+            <div class="container-fluid">
+                <ul class="nav d-flex flex-nowrap items-nav mb-3 d-flex rounded-lg row bg-dark h5" id="items-nav"
+                    role="tablist">
+                    <li class="nav-item w-100" role="presentation">
+                        <a class="nav-link" id="products-tab" data-toggle="tab" href="#products-pane" role="tab"
+                           aria-controls="products-pane" aria-selected="true"><span>Products</span></a>
+                    </li>
+                    <li class="nav-item w-100" role="presentation">
+                        <a class="nav-link" id="services-tab" data-toggle="tab" href="#services-pane" role="tab"
+                           aria-controls="services-pane" aria-selected="false"><span>Services</span></a>
+                    </li>
+                    <li class="nav-item w-100" role="presentation">
+                        <a class="nav-link active" id="items-tab" data-toggle="tab" href="#items-pane" role="tab"
+                           aria-controls="items-pane" aria-selected="false"><span>Items</span></a>
+                    </li>
+                    <li class="nav-item w-100" role="presentation">
+                        <a class="nav-link" id="sdf-tab" data-toggle="tab" href="#services-pane" role="tab"
+                           aria-controls="services-pane" aria-selected="false"><span>Services</span></a>
+                    </li>
+                    <li class="nav-item w-100" role="presentation">
+                        <a class="nav-link" id="itesdfgms-tab" data-toggle="tab" href="#items-pane" role="tab"
+                           aria-controls="items-pane" aria-selected="false"><span>Items</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade" id="products-pane" role="tabpanel"
+                     aria-labelledby="products-tab">
+asdaz
+                </div>
+                <div class="tab-pane fade" id="services-pane" role="tabpanel" aria-labelledby="services-tab">
+asd
+                </div>
+                <div class="tab-pane fade show active" id="items-pane" role="tabpanel" aria-labelledby="items-tab">
+                    <div class="row">
+                        <div class="col-3 mb-4">
+                            <div class="item-card">
+                                <img class="item-card-img mb-3" src="https://source.unsplash.com/random" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed consectetur adipiscing elit, sed do</p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="text-center mr-3">
+                                            <p class="material-icons text-glow-green mb-0">thumb_up</p>
+                                            <p class="mb-0">10000</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="material-icons text-glow-light-red mb-0">thumb_down</p>
+                                            <p class="mb-0">5000</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="progress progress-tiny bg-light-green mb-1">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0">75.13/<small>100</small></p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 h3 text-glow-green">$45.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-4">
+                            <div class="item-card">
+                                <img class="item-card-img mb-3" src="https://source.unsplash.com/random" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed consectetur adipiscing elit, sed do</p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="text-center mr-3">
+                                            <p class="material-icons text-glow-green mb-0">thumb_up</p>
+                                            <p class="mb-0">10000</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="material-icons text-glow-light-red mb-0">thumb_down</p>
+                                            <p class="mb-0">5000</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="progress progress-tiny bg-light-green mb-1">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0">75.13/<small>100</small></p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 h3 text-glow-green">$45.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-4">
+                            <div class="item-card">
+                                <img class="item-card-img mb-3" src="https://source.unsplash.com/random" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed consectetur adipiscing elit, sed do</p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="text-center mr-3">
+                                            <p class="material-icons text-glow-green mb-0">thumb_up</p>
+                                            <p class="mb-0">10000</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="material-icons text-glow-light-red mb-0">thumb_down</p>
+                                            <p class="mb-0">5000</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="progress progress-tiny bg-light-green mb-1">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0">75.13/<small>100</small></p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 h3 text-glow-green">$45.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-4">
+                            <div class="item-card">
+                                <img class="item-card-img mb-3" src="https://source.unsplash.com/random" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed consectetur adipiscing elit, sed do</p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="text-center mr-3">
+                                            <p class="material-icons text-glow-green mb-0">thumb_up</p>
+                                            <p class="mb-0">10000</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="material-icons text-glow-light-red mb-0">thumb_down</p>
+                                            <p class="mb-0">5000</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="progress progress-tiny bg-light-green mb-1">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0">75.13/<small>100</small></p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 h3 text-glow-green">$45.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-4">
+                            <div class="item-card">
+                                <img class="item-card-img mb-3" src="https://source.unsplash.com/random" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed consectetur adipiscing elit, sed do</p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="text-center mr-3">
+                                            <p class="material-icons text-glow-green mb-0">thumb_up</p>
+                                            <p class="mb-0">10000</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="material-icons text-glow-light-red mb-0">thumb_down</p>
+                                            <p class="mb-0">5000</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="progress progress-tiny bg-light-green mb-1">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0">75.13/<small>100</small></p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 h3 text-glow-green">$45.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-4">
+                            <div class="item-card">
+                                <img class="item-card-img mb-3" src="https://source.unsplash.com/random" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed consectetur adipiscing elit, sed do</p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="text-center mr-3">
+                                            <p class="material-icons text-glow-green mb-0">thumb_up</p>
+                                            <p class="mb-0">10000</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="material-icons text-glow-light-red mb-0">thumb_down</p>
+                                            <p class="mb-0">5000</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="progress progress-tiny bg-light-green mb-1">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0">75.13/<small>100</small></p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 h3 text-glow-green">$45.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-4">
+                            <div class="item-card">
+                                <img class="item-card-img mb-3" src="https://source.unsplash.com/random" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed consectetur adipiscing elit, sed do</p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="text-center mr-3">
+                                            <p class="material-icons text-glow-green mb-0">thumb_up</p>
+                                            <p class="mb-0">10000</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="material-icons text-glow-light-red mb-0">thumb_down</p>
+                                            <p class="mb-0">5000</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="progress progress-tiny bg-light-green mb-1">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0">75.13/<small>100</small></p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 h3 text-glow-green">$45.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-4">
+                            <div class="item-card">
+                                <img class="item-card-img mb-3" src="https://source.unsplash.com/random" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed consectetur adipiscing elit, sed do</p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="text-center mr-3">
+                                            <p class="material-icons text-glow-green mb-0">thumb_up</p>
+                                            <p class="mb-0">10000</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="material-icons text-glow-light-red mb-0">thumb_down</p>
+                                            <p class="mb-0">5000</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="progress progress-tiny bg-light-green mb-1">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%"
+                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="mb-0">75.13/<small>100</small></p>
+                                    </div>
+                                    <div>
+                                        <p class="mb-0 h3 text-glow-green">$45.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="pagination-row d-flex justify-content-center">
+                        <a class="active" href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <span>...</span>
+                        <a href="#">1050</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <h2 class="h5 font-weight-bold mb-3">Quests</h2>
+        <div class="row">
+            <div class="col-4">
+                <div class="quest rounded-lg p-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>
+                            <p class="h5 font-weight-bold text-light-gray">Lorem ipsum</p>
+                            <p class="mb-0">Et netus et malesuada</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="mr-2 xp text-glow-green">XP</span>
+                            <p class="h5 mb-0">+100</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <img class="achievement-image achievement-image-lg achievement-image-violet mb-4"
+                             src="../images/achievements/violet.png" alt="">
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex check-item mb-3 checked">
+                            <div class="check-icon-container mr-2">
+                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                            </div>
+                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                                pulvinar mattis</p>
+                        </div>
+                        <div class="d-flex check-item mb-3">
+                            <div class="check-icon-container mr-2">
+                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                            </div>
+                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                                pulvinar mattis</p>
+                        </div>
+                        <div class="d-flex check-item mb-3">
+                            <div class="check-icon-container mr-2">
+                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                            </div>
+                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                                pulvinar mattis</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="h5 text-light">1 / 3</p>
+                        <div class="progress bg-violet">
+                            <div class="progress-bar" role="progressbar" style="width: 40%"
+                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="quest rounded-lg p-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>
+                            <p class="h5 font-weight-bold text-light-gray">Lorem ipsum</p>
+                            <p class="mb-0">Et netus et malesuada</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="mr-2 xp text-glow-green">XP</span>
+                            <p class="h5 mb-0">+100</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <img class="achievement-image achievement-image-lg achievement-image-violet mb-4"
+                             src="../images/achievements/violet.png" alt="">
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex check-item mb-3 checked">
+                            <div class="check-icon-container mr-2">
+                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                            </div>
+                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                                pulvinar mattis</p>
+                        </div>
+                        <div class="d-flex check-item mb-3">
+                            <div class="check-icon-container mr-2">
+                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                            </div>
+                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                                pulvinar mattis</p>
+                        </div>
+                        <div class="d-flex check-item mb-3">
+                            <div class="check-icon-container mr-2">
+                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                            </div>
+                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                                pulvinar mattis</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="h5 text-light">1 / 3</p>
+                        <div class="progress bg-violet">
+                            <div class="progress-bar" role="progressbar" style="width: 40%"
+                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="quest rounded-lg p-4">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div>
+                            <p class="h5 font-weight-bold text-light-gray">Lorem ipsum</p>
+                            <p class="mb-0">Et netus et malesuada</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="mr-2 xp text-glow-green">XP</span>
+                            <p class="h5 mb-0">+100</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <img class="achievement-image achievement-image-lg achievement-image-violet mb-4"
+                             src="../images/achievements/violet.png" alt="">
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex check-item mb-3 checked">
+                            <div class="check-icon-container mr-2">
+                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                            </div>
+                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                                pulvinar mattis</p>
+                        </div>
+                        <div class="d-flex check-item mb-3">
+                            <div class="check-icon-container mr-2">
+                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                            </div>
+                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                                pulvinar mattis</p>
+                        </div>
+                        <div class="d-flex check-item mb-3">
+                            <div class="check-icon-container mr-2">
+                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                            </div>
+                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                                pulvinar mattis</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="h5 text-light">1 / 3</p>
+                        <div class="progress bg-violet">
+                            <div class="progress-bar" role="progressbar" style="width: 40%"
+                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <h2 class="h5 font-weight-bold mb-3">Reviews</h2>
+        <div class="outlined-nav-blue mb-5">
+            <nav class="nav text-center" id="nav-tab">
+                <a class="nav-item nav-link h5 mb-0 py-3 active" id="nav-home-tab"
+                   data-toggle="tab"
+                   href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+                    <span>All</span>
+                    <span class="badge badge-danger font-weight-normal ml-2 px-2">45</span>
+                </a>
+                <a class="nav-item nav-link h5 mb-0 py-3" id="nav-profile-tab" data-toggle="tab"
+                   href="#nav-profile" role="tab" aria-controls="nav-profile"
+                   aria-selected="false">
+                    <span>Positive</span>
+                    <span class="badge badge-danger font-weight-normal ml-2 px-2">300</span>
+                </a>
+                <a class="nav-item nav-link h5 mb-0 py-3" id="nav-contact-tab" data-toggle="tab"
+                   href="#nav-contact" role="tab" aria-controls="nav-contact"
+                   aria-selected="false">
+                    <span>Negative</span>
+                    <span class="badge badge-danger font-weight-normal ml-2 px-2">45</span>
+                </a>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                     aria-labelledby="nav-home-tab">
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-green md-30 mr-4">thumb_up</span>
+                                <div class="user-image-container online mr-3">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">
+                                    <span>John Doe </span>
+                                    <span class="text-violet px-1">|</span>
+                                    <a class="dark-violet" href="#">Grand Theft Auto V: Premium Online Edition Rockstar Key</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="mb-0">Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-light-red md-30 mr-3">thumb_down</span>
+                                <div class="user-image-container online mr-3">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">
+                                    <span>John Doe </span>
+                                    <span class="text-violet px-1">|</span>
+                                    <a class="dark-violet" href="#">Grand Theft Auto V: Premium Online Edition Rockstar Key</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="mb-0">Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                    <div class="text-center mb-4">
+                        <button class="btn btn-outline-light-dark px-5 font-weight-bold">Load more</button>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                     aria-labelledby="nav-profile-tab">
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-green md-30 mr-3">thumb_up</span>
+                                <div class="user-image-container online mr-4">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-light-red md-30 mr-4">thumb_down</span>
+                                <div class="user-image-container online mr-4">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                     aria-labelledby="nav-contact-tab">
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-green md-30 mr-4">thumb_up</span>
+                                <div class="user-image-container online mr-4">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-light-red md-30 mr-4">thumb_down</span>
+                                <div class="user-image-container online mr-4">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-green md-30 mr-4">thumb_up</span>
+                                <div class="user-image-container online mr-4">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-light-red md-30 mr-4">thumb_down</span>
+                                <div class="user-image-container online mr-4">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!--FIREBASE-->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAbEAzA_TAnuFyC-HIbBwBPOomhiQMwnoQ",
+      authDomain: "aso-rock--23.firebaseapp.com",
+      projectId: "aso-rock--23",
+      storageBucket: "aso-rock--23.appspot.com",
+      messagingSenderId: "290641051605",
+      appId: "1:290641051605:web:bfe76de2acc6a8d41ac75c",
+      measurementId: "G-DV5BDZ1V0Y"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<script>
+  $('.material-input input, .material-input select').on('input', function() {
+    $(this).closest('.material-input').addClass('active');
+  });
+  $('.material-input input, .material-input select').focusout(function() {
+    if ($(this).val() === '') {
+      $(this).closest('.material-input').removeClass('active');
+    }
+  });
+
+  $('#menu-fixed-toggle').click(function() {
+    $('body').toggleClass('collapsed');
+  });
+
+  //info accordion
+  $('.collapse').on('show.bs.collapse', function(e) {
+    $(this).parent().toggleClass('expanded');
+  });
+  $('.collapse').on('hide.bs.collapse', function(e) {
+    $(this).parent().toggleClass('expanded');
+  });
+
+  $('.menu-accordion-collapse-toggle').click(function() {
+    $(this).siblings('.collapse').collapse('toggle');
+  });
+
+  $('.accordion-collapse-toggle').click(function() {
+    $(this).find('.collapse').collapse('toggle');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+    
+    <div class="container pt-5" >
+        <p class="row ml-auto" style="text-align:right;">2,016 politicians contesting!</p>
+
+        <div class="content pr-5 pl-5" style="text-align:center;"> 
+            <h1 > ASO ROCK </h1>
+        </div>
+
+
+        
+            
+            <div class="content pt-5 pb-3">
+                 <h3 class="text-green">
+                <strong>Aso Rock '23</strong> 
+                is a Nigerian political simulation game. Forge alliances, bribe
+                or intimidate the opposition and fight your way into the highest 
+                office.  Peace and Prosperity. Bitterness and War. Its up to you.
+                </h3>
+
+            
+           
+            <div class="content" style="text-align:center;">
+                    <a href="signup.html"><i class="icon-flag-1 pr-3"></i>Start Campaign</a>
+                    <a href="FAQ.html"><i class="icon-newspaper pr-3 pl-3"></i>How to Play</a>
+                    <a href="login.html"><i class="icon-login pr-3 pl-3"></i> Log In</a>
+            </div>
+            <div class="content">
+            <p id="tclinks" class="smalltext"style="text-align:center;" >
+                <a href="/page=privacy">Privacy Policy</a> • 
+                <a href="/page=legal">Terms &amp; Conditions</a>
+            </p>
+        </div>
+            </div>
+
+            
+    </div>
+
+
+    <div id="foot">
+
+    </div>
+
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAbEAzA_TAnuFyC-HIbBwBPOomhiQMwnoQ",
+    authDomain: "aso-rock--23.firebaseapp.com",
+    projectId: "aso-rock--23",
+    storageBucket: "aso-rock--23.appspot.com",
+    messagingSenderId: "290641051605",
+    appId: "1:290641051605:web:bfe76de2acc6a8d41ac75c",
+    measurementId: "G-DV5BDZ1V0Y"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+<script>
+    // my scripts
+    const auth = firebase.auth()
+    const registerSumbit = document.getElementById('register_submit')
+
+    registerSumbit.addEventListener('click', function (event) {
+        event.preventDefault();
+        let hasErrors = false;
+
+        const registerForm = document.getElementById('registration')
+
+        // Field Values Start
+        const email = document.getElementById('email').value
+        const password = document.getElementById('password').value
+        const passwordConfirm = document.getElementById('password_confirm').value
+        const registerAgreement = document.getElementById('register_agreement')
+        // Field Values End
+
+        // Errors Variable Start
+        const emailError = document.getElementById("error_email")
+        const passwordError = document.getElementById("error_password")
+        const passwordConfirmError = document.getElementById("error_password2")
+        const registerAgreementError = document.getElementById("error_agree")
+        // Errors Variable End
+
+        let errors = {}
+
+        if (!(email.includes('@'))) {
+            errors.email = "Invalid Email"
+            emailError.innerHTML = errors.email
+            emailError.style.color = 'red'
+            hasErrors = true
+        } else {
+            emailError.innerHTML = ''
+        }
+
+        if (password.length < 8) {
+            errors.password = 'Passwords should be at least 8 symbol'
+            passwordError.innerHTML = errors.password
+            passwordError.style.color = 'red'
+            hasErrors = true
+        } else {
+            passwordError.innerHTML = ''
+        }
+
+        if (password !== passwordConfirm) {
+            errors.passwordConfirm = 'Passwords doesn\'t match'
+            passwordConfirmError.innerHTML = errors.passwordConfirm
+            passwordConfirmError.style.color = 'red'
+            hasErrors = true
+        } else if (password === passwordConfirm && password.length > 7) {
+            passwordConfirmError.innerHTML = ''
+        }
+
+        if (registerAgreement.checked === false) {
+            errors.agreement = 'You need to agree terms'
+            registerAgreementError.innerHTML = errors.agreement
+            registerAgreementError.style.color = 'red'
+            hasErrors = true
+        } else {
+            registerAgreementError.innerHTML = ''
+        }
+
+        if (hasErrors === true) {
+            return hasErrors;
+        } else if (hasErrors === false){
+            auth.createUserWithEmailAndPassword(email, password).then(() => {
+                registerForm.setAttribute('action', 'questionnaire.html')
+                registerForm.submit()
+            }).catch(err => {
+                alert(err.message)
+            })
+        }
+    })
+
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
